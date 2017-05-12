@@ -21,6 +21,34 @@ namespace WardrobeMVCProject.Controllers
             return View(articles.ToList());
         }
 
+        // GET: Articles - TOPS
+        public ActionResult Tops()
+        {
+            var articles = db.Articles.Include(a => a.ArticleType).Include(a => a.Color).Include(a => a.Occasion).Include(a => a.Season);
+            return View(articles.ToList());
+        }
+
+        // GET: Articles - BOTTOMS
+        public ActionResult Bottoms()
+        {
+            var articles = db.Articles.Include(a => a.ArticleType).Include(a => a.Color).Include(a => a.Occasion).Include(a => a.Season);
+            return View(articles.ToList());
+        }
+
+        // GET: Articles - SHOES
+        public ActionResult Shoes()
+        {
+            var articles = db.Articles.Include(a => a.ArticleType).Include(a => a.Color).Include(a => a.Occasion).Include(a => a.Season);
+            return View(articles.ToList());
+        }
+
+        // GET: Articles - ACCESSORIES
+        public ActionResult ACCESSORIES()
+        {
+            var articles = db.Articles.Include(a => a.ArticleType).Include(a => a.Color).Include(a => a.Occasion).Include(a => a.Season);
+            return View(articles.ToList());
+        }
+
         // GET: Articles/Details/5
         public ActionResult Details(int? id)
         {
