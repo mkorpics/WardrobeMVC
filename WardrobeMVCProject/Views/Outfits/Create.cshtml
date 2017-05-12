@@ -1,0 +1,128 @@
+﻿@model WardrobeMVCProject.Models.Outfit
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Outfit</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.ArticleID1, "ArticleID1", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ArticleID1", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ArticleID1, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ArticleID2, "ArticleID2", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ArticleID2", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ArticleID2, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ArticleID3, "ArticleID3", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ArticleID3", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ArticleID3, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ArticleID4, "ArticleID4", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ArticleID4", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ArticleID4, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ArticleID5, "ArticleID5", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ArticleID5", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ArticleID5, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ArticleID6, "ArticleID6", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ArticleID6", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ArticleID6, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ArticleID7, "ArticleID7", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ArticleID7", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ArticleID7, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ArticleID8, "ArticleID8", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ArticleID8", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ArticleID8, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ArticleID9, "ArticleID9", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ArticleID9", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ArticleID9, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ArticleID10, "ArticleID10", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ArticleID10", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ArticleID10, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ArticleID11, "ArticleID11", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ArticleID11", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ArticleID11, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ArticleID12, "ArticleID12", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ArticleID12", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ArticleID12, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

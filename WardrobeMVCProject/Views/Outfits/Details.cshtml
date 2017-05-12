@@ -1,0 +1,114 @@
+﻿@model WardrobeMVCProject.Models.Outfit
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Outfit</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Article.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Article.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Article1.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Article1.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Article2.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Article2.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Article3.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Article3.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Article4.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Article4.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Article5.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Article5.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Article6.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Article6.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Article7.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Article7.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Article8.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Article8.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Article9.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Article9.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Article10.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Article10.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Article11.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Article11.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.OutfitID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
