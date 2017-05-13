@@ -11,7 +11,8 @@ namespace WardrobeMVCProject.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Occasion
     {
         public Occasion()
@@ -20,6 +21,7 @@ namespace WardrobeMVCProject.Models
         }
     
         public int OccasionID { get; set; }
+        [Display(Name = "Occasion")]
         public string Occasion1 { get; set; }
     
         public virtual ICollection<Article> Articles { get; set; }

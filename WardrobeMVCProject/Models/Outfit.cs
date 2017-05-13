@@ -11,16 +11,25 @@ namespace WardrobeMVCProject.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Outfit
     {
         public int OutfitID { get; set; }
+
+        [Display(Name = "Top")]
         public int ArticleID1 { get; set; }
+        [Display(Name = "Top 2")]
         public Nullable<int> ArticleID2 { get; set; }
+        [Display(Name = "Bottom")]
         public Nullable<int> ArticleID3 { get; set; }
+        [Display(Name = "Shoes")]
         public Nullable<int> ArticleID4 { get; set; }
+        [Display(Name = "Accessory")]
         public Nullable<int> ArticleID5 { get; set; }
+        [Display(Name = "Accessory 2")]
         public Nullable<int> ArticleID6 { get; set; }
+        [Display(Name = "Accessory 3")]
         public Nullable<int> ArticleID7 { get; set; }
         public Nullable<int> ArticleID8 { get; set; }
         public Nullable<int> ArticleID9 { get; set; }

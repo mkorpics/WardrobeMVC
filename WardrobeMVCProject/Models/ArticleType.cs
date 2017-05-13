@@ -11,7 +11,8 @@ namespace WardrobeMVCProject.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class ArticleType
     {
         public ArticleType()
@@ -20,6 +21,8 @@ namespace WardrobeMVCProject.Models
         }
     
         public int ArticleTypeID { get; set; }
+
+        [Display(Name="Type of Article")]
         public string ArticleType1 { get; set; }
     
         public virtual ICollection<Article> Articles { get; set; }

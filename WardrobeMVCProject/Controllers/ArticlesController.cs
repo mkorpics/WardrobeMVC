@@ -21,32 +21,75 @@ namespace WardrobeMVCProject.Controllers
             return View(articles.ToList());
         }
 
-        // GET: Articles - TOPS
-        public ActionResult Tops()
+        // GET: Articles - SUITS
+        public ActionResult Suits()
         {
             var articles = db.Articles.Include(a => a.ArticleType).Include(a => a.Color).Include(a => a.Occasion).Include(a => a.Season);
-            return View(articles.ToList());
+
+            List<Article> articleList = new List<Article>();
+
+            foreach(Article a in articles)
+            {
+                if(a.ArticleType.ArticleType1.Contains("Suit"))
+                {
+                    articleList.Add(a);
+                }
+            }
+
+            return View(articleList);
         }
 
-        // GET: Articles - BOTTOMS
-        public ActionResult Bottoms()
+        // GET: Articles - CAPES
+        public ActionResult Capes()
         {
             var articles = db.Articles.Include(a => a.ArticleType).Include(a => a.Color).Include(a => a.Occasion).Include(a => a.Season);
-            return View(articles.ToList());
+
+            List<Article> articleList = new List<Article>();
+
+            foreach(Article a in articles)
+            {
+                if (a.ArticleType.ArticleType1.Contains("Cape"))
+                {
+                    articleList.Add(a);
+                }
+            }
+            return View(articleList);
         }
 
         // GET: Articles - SHOES
         public ActionResult Shoes()
         {
             var articles = db.Articles.Include(a => a.ArticleType).Include(a => a.Color).Include(a => a.Occasion).Include(a => a.Season);
-            return View(articles.ToList());
+
+            List<Article> articleList = new List<Article>();
+
+            foreach(Article a in articles)
+            {
+                if(a.ArticleType.ArticleType1.Contains("Shoes"))
+                {
+                    articleList.Add(a);
+                }
+            }
+
+            return View(articleList);
         }
 
         // GET: Articles - ACCESSORIES
         public ActionResult ACCESSORIES()
         {
             var articles = db.Articles.Include(a => a.ArticleType).Include(a => a.Color).Include(a => a.Occasion).Include(a => a.Season);
-            return View(articles.ToList());
+
+            List<Article> articleList = new List<Article>();
+
+            foreach(Article a in articles)
+            {
+                if(a.ArticleType.ArticleType1.Contains("Accessories"))
+                {
+                    articleList.Add(a);
+                }
+            }
+
+            return View(articleList);
         }
 
         // GET: Articles/Details/5

@@ -11,7 +11,8 @@ namespace WardrobeMVCProject.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Season
     {
         public Season()
@@ -20,6 +21,7 @@ namespace WardrobeMVCProject.Models
         }
     
         public int SeasonID { get; set; }
+        [Display(Name = "Season")]
         public string Season1 { get; set; }
     
         public virtual ICollection<Article> Articles { get; set; }

@@ -11,7 +11,8 @@ namespace WardrobeMVCProject.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Article
     {
         public Article()
@@ -31,11 +32,23 @@ namespace WardrobeMVCProject.Models
         }
     
         public int ArticleID { get; set; }
+
+        [StringLength(50, ErrorMessage = "This field cannot exceed 50 characters.")]
         public string Name { get; set; }
+
+        [StringLength(100, ErrorMessage = "This field cannot exceed 100 characters.")]
         public string Photo { get; set; }
+
+        [Display(Name = "Type of Article")]
         public int ArticleTypeID { get; set; }
+
+        [Display(Name = "Color")]
         public int ColorID { get; set; }
+
+        [Display(Name = "Season")]
         public int SeasonID { get; set; }
+
+        [Display(Name = "Occasion")]
         public int OccasionID { get; set; }
     
         public virtual ArticleType ArticleType { get; set; }

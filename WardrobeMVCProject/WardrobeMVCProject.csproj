@@ -260,8 +260,8 @@
     <Content Include="Views\Seasons\Details.cshtml" />
     <Content Include="Views\Seasons\Edit.cshtml" />
     <Content Include="Views\Seasons\Index.cshtml" />
-    <Content Include="Views\Articles\Tops.cshtml" />
-    <Content Include="Views\Articles\Bottoms.cshtml" />
+    <Content Include="Views\Articles\Suits.cshtml" />
+    <Content Include="Views\Articles\Capes.cshtml" />
     <Content Include="Views\Articles\Shoes.cshtml" />
     <Content Include="Views\Articles\Accessories.cshtml" />
   </ItemGroup>

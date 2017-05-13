@@ -11,7 +11,8 @@ namespace WardrobeMVCProject.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Color
     {
         public Color()
@@ -20,6 +21,8 @@ namespace WardrobeMVCProject.Models
         }
     
         public int ColorID { get; set; }
+
+        [Display(Name = "Color")]
         public string Color1 { get; set; }
     
         public virtual ICollection<Article> Articles { get; set; }
