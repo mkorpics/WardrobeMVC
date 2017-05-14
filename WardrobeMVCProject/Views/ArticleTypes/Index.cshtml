@@ -4,30 +4,36 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<div class="page-header textBox container">
+    <h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.ArticleType1)
-        </th>
-        <th></th>
-    </tr>
+    <p>
+        @Html.ActionLink("Create New", "Create", new { }, new { @class = "btn superheroBtn", role = "button" })
+    </p>
+</div>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.ArticleType1)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ArticleTypeID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ArticleTypeID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ArticleTypeID })
-        </td>
-    </tr>
-}
+<div class="alternateTextBox">
+    <table class="table">
+        <tr>
+            <th class="bold">
+                @Html.DisplayNameFor(model => model.ArticleType1)
+            </th>
+            <th></th>
+        </tr>
 
-</table>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ArticleType1)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ArticleTypeID }, new { @class = "btn superheroBtn", role = "button" })
+                    @Html.ActionLink("Details", "Details", new { id = item.ArticleTypeID }, new { @class = "btn superheroBtn", role = "button" })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ArticleTypeID }, new { @class = "btn superheroBtn ", role = "button" })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

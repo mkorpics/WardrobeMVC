@@ -2,13 +2,13 @@
     padding-top: 50px;
     padding-bottom: 20px;
     background-image: url('images/IMG_2980.JPG');
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-size:cover;
 }
 
 .body-content {
     padding-right: 2vw;
     padding-left: 4.5vw;
+    min-height: 100vh;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -18,6 +18,10 @@
     white-space: normal;
 }
 
+.table tr th, td {
+    border: none;
+}
+
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
@@ -25,6 +29,14 @@ textarea {
     max-width: 280px;
 }
 
+.navbar {
+    background-color: black;
+}
+
+ul.nav.navbar-nav li .navbarLink {
+    color: white;
+    margin-left: 2vw;
+}
 
 .jumbotron {
     background-image: url('images/IMG_2981.JPG');
@@ -51,7 +63,7 @@ textarea {
     margin: 5px;
 }
 
-Article.homepage {
+.alternateTextBox {
     margin: 10vh 10vw;
     padding: 2vh 2vw;
     background-color: rgba(0,0,0,.7);
@@ -113,7 +125,7 @@ Article.homepage {
     padding-left: 20vw;
 }
 
-.detailsPhoto.thumbnail {
+.detailsPhoto.thumbnail, .deletePhoto.thumbnail {
     border: none;
 }
 
@@ -128,6 +140,26 @@ Article.homepage {
 
 .largeBtn {
     padding: 7px 35px;
+}
+
+.deletePhoto img {
+    height: 25vh;
+    margin: 0;
+    padding-left: 34vw;
+}
+
+.detailsPhoto.thumbnail {
+    border: none;
+}
+
+.caption {
+    text-align: center;
+    padding: 2vh 2vw;
+    margin: 3vh, 6vw;
+}
+
+.addMargin {
+    margin: 4vh auto;
 }
 
 footer {

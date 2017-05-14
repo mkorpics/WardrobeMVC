@@ -4,45 +4,45 @@
     ViewBag.Title = "Index";
 }
 
-<div class="container-fluid body-content body-content">
+<div class="container-fluid body-content">
 
     <div class="page-header textBox container">
-        <h2>Index</h2>
+        <h2 class="addMargin">Manage Your Articles</h2>
 
-        <p>
-            @Html.ActionLink("Create New", "Create", new { }, new {@class = "btn superheroBtn", role="button" })
+        <p class="addMargin">Welcome to your wardrobe manager. Here you may create new articles and manage your colors, occassions and seasons entries.</p>
+
+        <p class="addMargin">
+            @Html.ActionLink("Create A New Article", "Create", new { }, new { @class = "btn superheroBtn", role = "button" })
         </p>
     </div>
 
     <div class="row articleDisplay">
-        @foreach (var item in Model)
-        {
-            <div class="col-md-5 col-sm-12 articleContent border">
-                <div class="col-md-3 col col-sm-4 col-xs-4">
-                    <div class="thumbnail">
-                        <img src="@Url.Content(item.Photo)" onerror="if (this.src != 'error.jpg') this.src = '~/Content/images/No-Photo-Available-240x300.jpg';" />
-                    </div>
-                </div>
+        <div class="col-md-3 col-sm-12 articleContent border caption">
+            <h4 class="bold addMargin">Colors</h4>
+            <p class="addMargin">Adding a super cool new item to your collection? One that has a super unique color for a super cool superhero? Head right on over to the colors page to manage your colors with your super-genious.</p>
+            <p class="addMargin"><a href="~/Colors/Index" class="btn superheroBtn">Colors</a></>
+        </div>
+        <div class="col-md-3 col-sm-12 articleContent border caption">
+            <h4 class="bold addMargin">Occasions</h4>
+            <p class="addMargin">Being a generously humble and generally adored superhero, someone like yourself will clearly run across times when it is simply imperative to add another glorious occasion to the list! We will forgo to mention that-which-shall-not-be-named (unmitigated disasters precipitated by abysmally inept "super"heroes who may perhaps be living long enough to becomes the villain...)</p>
+            <p class="addMargin"><a href="~/Occasions/Index" class="btn superheroBtn">Occasions</a></>
+        </div>
+        <div class="col-md-3 col-sm-12 articleContent border caption">
+            <h4 class="bold addMargin">Seasons</h4>
+            <p class="addMargin">Seasons of life come and go. We've provided the most common that our superheroes encounter. But we know such strapping young people like yourselves will probably branch out in your careers. Feel free to refine your list of seasons as circumstance dictates.</p>
+            <p class="addMargin"><a href="~/Seasons/Index" class="btn superheroBtn">Seasons</a></p>
+        </div>
+    </div>
 
-                <div class="col-md-2 col-sm-3 col-xs-3">
-                    <p>@Html.DisplayNameFor(model => model.Name): </p>
-                    <p>@Html.DisplayNameFor(model => model.Color.Color1):</p>
-                    <p>@Html.DisplayNameFor(model => model.Occasion.Occasion1): </p>
-                    <p>@Html.DisplayNameFor(model => model.Season.Season1): </p>
-                </div>
-
-                <div class="col-md-7 col-sm-5 col-xs-5">
-                    <p>@Html.DisplayFor(modelItem => item.Name)</p>
-                    <p>@Html.DisplayFor(modelItem => item.Color.Color1)</p>
-                    <p>@Html.DisplayFor(modelItem => item.Occasion.Occasion1)</p>
-                    <p>@Html.DisplayFor(modelItem => item.Season.Season1)</p>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.ArticleID }, new { @class = "btn superheroBtn", role = "button" })
-                    @Html.ActionLink("Details", "Details", new { id = item.ArticleID }, new { @class = "btn superheroBtn", role = "button" })
-                    @Html.ActionLink("Delete", "Delete", new { id = item.ArticleID }, new { @class = "btn superheroBtn", role = "button" })
-                </div>
-            </div>
-
-        }
+    <div class="row alternateTextBox border">
+        <h4 class="bold addMargin">Take A Look At Your Articles</h4>
+        <p class="addMargin">Impatient to get started? Managed your wardrobe to your heart's content? Go ahead and take a look at the articles in your wardrobe!</p>
+        <p class="addMargin">
+            @Html.ActionLink("Suits", "Suits", new { }, new { @class = "btn superheroBtn", role = "button" })
+            @Html.ActionLink("Shoes", "Shoes", new { }, new { @class = "btn superheroBtn", role = "button" })
+            @Html.ActionLink("Capes", "Capes", new { }, new { @class = "btn superheroBtn", role = "button" })
+            @Html.ActionLink("Accessories", "Accessories", new { }, new { @class = "btn superheroBtn", role = "button" })
+        </p>
     </div>
 
 </div>

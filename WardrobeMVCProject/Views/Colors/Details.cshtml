@@ -4,23 +4,27 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
-
-<div>
-    <h4>Color</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Color1)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Color1)
-        </dd>
-
-    </dl>
+<div class="page-header textBox container">
+    <h2>Details</h2>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ColorID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+
+<div class="alternateTextBox">
+    <div>
+        <h4>Color</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt class="bold">
+                @Html.DisplayNameFor(model => model.Color1)
+            </dt>
+
+            <dd class="textLeft">
+                @Html.DisplayFor(model => model.Color1)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ColorID }, new { @class = "btn superheroBtn", role = "button" })
+        @Html.ActionLink("Back to List", "Index", new { }, new { @class = "btn superheroBtn", role = "button" })
+    </p>
+</div>
