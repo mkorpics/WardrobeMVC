@@ -4,7 +4,9 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<div class="page-header textBox container">
+    <h2>Details</h2>
+</div>
 
 <div>
     <h4>Article</h4>
@@ -61,6 +63,12 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ArticleID }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ArticleID })
+</p>
+<p>
+    @Html.ActionLink("Articles", "Index", new { }, new { @class = "btn superheroBtn", role = "button" })
+    @Html.ActionLink("Suits", "Suits", new { }, new { @class = "btn superheroBtn", role = "button" })
+    @Html.ActionLink("Capes", "Capes", new { }, new { @class = "btn superheroBtn", role = "button" })
+    @Html.ActionLink("Shoes", "Shoes", new { }, new { @class = "btn superheroBtn", role = "button" })
+    @Html.ActionLink("Accessories", "Accessories", new { }, new { @class = "btn superheroBtn", role = "button" })
 </p>

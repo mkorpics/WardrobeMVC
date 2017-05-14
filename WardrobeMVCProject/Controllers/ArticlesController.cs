@@ -138,6 +138,130 @@ namespace WardrobeMVCProject.Controllers
             return View(article);
         }
 
+        // GET: Articles/CreateSuits
+        public ActionResult CreateSuits()
+        {
+            ViewBag.ArticleTypeID = new SelectList(db.ArticleTypes, "ArticleTypeID", "ArticleType1");
+            ViewBag.ColorID = new SelectList(db.Colors, "ColorID", "Color1");
+            ViewBag.OccasionID = new SelectList(db.Occasions, "OccasionID", "Occasion1");
+            ViewBag.SeasonID = new SelectList(db.Seasons, "SeasonID", "Season1");
+            return View();
+        }
+
+        // POST: Articles/CreateSuits
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CreateSuits([Bind(Include = "ArticleID,Name,Photo,ArticleTypeID,ColorID,SeasonID,OccasionID")] Article article)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Articles.Add(article);
+                db.SaveChanges();
+                return RedirectToAction("Suits");
+            }
+
+            ViewBag.ArticleTypeID = new SelectList(db.ArticleTypes, "ArticleTypeID", "ArticleType1", article.ArticleTypeID);
+            ViewBag.ColorID = new SelectList(db.Colors, "ColorID", "Color1", article.ColorID);
+            ViewBag.OccasionID = new SelectList(db.Occasions, "OccasionID", "Occasion1", article.OccasionID);
+            ViewBag.SeasonID = new SelectList(db.Seasons, "SeasonID", "Season1", article.SeasonID);
+            return View(article);
+        }
+
+        // GET: Articles/CreateCapes
+        public ActionResult CreateCapes()
+        {
+            ViewBag.ArticleTypeID = new SelectList(db.ArticleTypes, "ArticleTypeID", "ArticleType1");
+            ViewBag.ColorID = new SelectList(db.Colors, "ColorID", "Color1");
+            ViewBag.OccasionID = new SelectList(db.Occasions, "OccasionID", "Occasion1");
+            ViewBag.SeasonID = new SelectList(db.Seasons, "SeasonID", "Season1");
+            return View();
+        }
+
+        // POST: Articles/CreateSuits
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CreateCapes([Bind(Include = "ArticleID,Name,Photo,ArticleTypeID,ColorID,SeasonID,OccasionID")] Article article)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Articles.Add(article);
+                db.SaveChanges();
+                return RedirectToAction("Capes");
+            }
+
+            ViewBag.ArticleTypeID = new SelectList(db.ArticleTypes, "ArticleTypeID", "ArticleType1", article.ArticleTypeID);
+            ViewBag.ColorID = new SelectList(db.Colors, "ColorID", "Color1", article.ColorID);
+            ViewBag.OccasionID = new SelectList(db.Occasions, "OccasionID", "Occasion1", article.OccasionID);
+            ViewBag.SeasonID = new SelectList(db.Seasons, "SeasonID", "Season1", article.SeasonID);
+            return View(article);
+        }
+
+        // GET: Articles/CreateShoes
+        public ActionResult CreateShoes()
+        {
+            ViewBag.ArticleTypeID = new SelectList(db.ArticleTypes, "ArticleTypeID", "ArticleType1");
+            ViewBag.ColorID = new SelectList(db.Colors, "ColorID", "Color1");
+            ViewBag.OccasionID = new SelectList(db.Occasions, "OccasionID", "Occasion1");
+            ViewBag.SeasonID = new SelectList(db.Seasons, "SeasonID", "Season1");
+            return View();
+        }
+
+        // POST: Articles/CreateShoes
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CreateShoes([Bind(Include = "ArticleID,Name,Photo,ArticleTypeID,ColorID,SeasonID,OccasionID")] Article article)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Articles.Add(article);
+                db.SaveChanges();
+                return RedirectToAction("Shoes");
+            }
+
+            ViewBag.ArticleTypeID = new SelectList(db.ArticleTypes, "ArticleTypeID", "ArticleType1", article.ArticleTypeID);
+            ViewBag.ColorID = new SelectList(db.Colors, "ColorID", "Color1", article.ColorID);
+            ViewBag.OccasionID = new SelectList(db.Occasions, "OccasionID", "Occasion1", article.OccasionID);
+            ViewBag.SeasonID = new SelectList(db.Seasons, "SeasonID", "Season1", article.SeasonID);
+            return View(article);
+        }
+
+        // GET: Articles/CreateAccessories
+        public ActionResult CreateAccessories()
+        {
+            ViewBag.ArticleTypeID = new SelectList(db.ArticleTypes, "ArticleTypeID", "ArticleType1");
+            ViewBag.ColorID = new SelectList(db.Colors, "ColorID", "Color1");
+            ViewBag.OccasionID = new SelectList(db.Occasions, "OccasionID", "Occasion1");
+            ViewBag.SeasonID = new SelectList(db.Seasons, "SeasonID", "Season1");
+            return View();
+        }
+
+        // POST: Articles/CreateAccessories
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CreateAccessories([Bind(Include = "ArticleID,Name,Photo,ArticleTypeID,ColorID,SeasonID,OccasionID")] Article article)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Articles.Add(article);
+                db.SaveChanges();
+                return RedirectToAction("Accessories");
+            }
+
+            ViewBag.ArticleTypeID = new SelectList(db.ArticleTypes, "ArticleTypeID", "ArticleType1", article.ArticleTypeID);
+            ViewBag.ColorID = new SelectList(db.Colors, "ColorID", "Color1", article.ColorID);
+            ViewBag.OccasionID = new SelectList(db.Occasions, "OccasionID", "Occasion1", article.OccasionID);
+            ViewBag.SeasonID = new SelectList(db.Seasons, "SeasonID", "Season1", article.SeasonID);
+            return View(article);
+        }
+
         // GET: Articles/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -177,6 +301,162 @@ namespace WardrobeMVCProject.Controllers
             return View(article);
         }
 
+        // GET: Articles/Suits/Edit/5
+        public ActionResult EditSuits(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Article article = db.Articles.Find(id);
+            if (article == null)
+            {
+                return HttpNotFound();
+            }
+            ViewBag.ArticleTypeID = new SelectList(db.ArticleTypes, "ArticleTypeID", "ArticleType1", article.ArticleTypeID);
+            ViewBag.ColorID = new SelectList(db.Colors, "ColorID", "Color1", article.ColorID);
+            ViewBag.OccasionID = new SelectList(db.Occasions, "OccasionID", "Occasion1", article.OccasionID);
+            ViewBag.SeasonID = new SelectList(db.Seasons, "SeasonID", "Season1", article.SeasonID);
+            return View(article);
+        }
+
+        // POST: Articles/Suits/Edit/5
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult EditSuits([Bind(Include = "ArticleID,Name,Photo,ArticleTypeID,ColorID,SeasonID,OccasionID")] Article article)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(article).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Suits");
+            }
+            ViewBag.ArticleTypeID = new SelectList(db.ArticleTypes, "ArticleTypeID", "ArticleType1", article.ArticleTypeID);
+            ViewBag.ColorID = new SelectList(db.Colors, "ColorID", "Color1", article.ColorID);
+            ViewBag.OccasionID = new SelectList(db.Occasions, "OccasionID", "Occasion1", article.OccasionID);
+            ViewBag.SeasonID = new SelectList(db.Seasons, "SeasonID", "Season1", article.SeasonID);
+            return View(article);
+        }
+
+        // GET: Articles/Shoes/Edit/5
+        public ActionResult EditShoes(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Article article = db.Articles.Find(id);
+            if (article == null)
+            {
+                return HttpNotFound();
+            }
+            ViewBag.ArticleTypeID = new SelectList(db.ArticleTypes, "ArticleTypeID", "ArticleType1", article.ArticleTypeID);
+            ViewBag.ColorID = new SelectList(db.Colors, "ColorID", "Color1", article.ColorID);
+            ViewBag.OccasionID = new SelectList(db.Occasions, "OccasionID", "Occasion1", article.OccasionID);
+            ViewBag.SeasonID = new SelectList(db.Seasons, "SeasonID", "Season1", article.SeasonID);
+            return View(article);
+        }
+
+        // POST: Articles/Shoes/Edit/5
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult EditShoes([Bind(Include = "ArticleID,Name,Photo,ArticleTypeID,ColorID,SeasonID,OccasionID")] Article article)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(article).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Shoes");
+            }
+            ViewBag.ArticleTypeID = new SelectList(db.ArticleTypes, "ArticleTypeID", "ArticleType1", article.ArticleTypeID);
+            ViewBag.ColorID = new SelectList(db.Colors, "ColorID", "Color1", article.ColorID);
+            ViewBag.OccasionID = new SelectList(db.Occasions, "OccasionID", "Occasion1", article.OccasionID);
+            ViewBag.SeasonID = new SelectList(db.Seasons, "SeasonID", "Season1", article.SeasonID);
+            return View(article);
+        }
+
+        // GET: Articles/Capes/Edit/5
+        public ActionResult EditCapes(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Article article = db.Articles.Find(id);
+            if (article == null)
+            {
+                return HttpNotFound();
+            }
+            ViewBag.ArticleTypeID = new SelectList(db.ArticleTypes, "ArticleTypeID", "ArticleType1", article.ArticleTypeID);
+            ViewBag.ColorID = new SelectList(db.Colors, "ColorID", "Color1", article.ColorID);
+            ViewBag.OccasionID = new SelectList(db.Occasions, "OccasionID", "Occasion1", article.OccasionID);
+            ViewBag.SeasonID = new SelectList(db.Seasons, "SeasonID", "Season1", article.SeasonID);
+            return View(article);
+        }
+
+        // POST: Articles/Capes/Edit/5
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult EditCapes([Bind(Include = "ArticleID,Name,Photo,ArticleTypeID,ColorID,SeasonID,OccasionID")] Article article)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(article).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Capes");
+            }
+            ViewBag.ArticleTypeID = new SelectList(db.ArticleTypes, "ArticleTypeID", "ArticleType1", article.ArticleTypeID);
+            ViewBag.ColorID = new SelectList(db.Colors, "ColorID", "Color1", article.ColorID);
+            ViewBag.OccasionID = new SelectList(db.Occasions, "OccasionID", "Occasion1", article.OccasionID);
+            ViewBag.SeasonID = new SelectList(db.Seasons, "SeasonID", "Season1", article.SeasonID);
+            return View(article);
+        }
+
+        // GET: Articles/Accessories/Edit/5
+        public ActionResult EditAccessories(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Article article = db.Articles.Find(id);
+            if (article == null)
+            {
+                return HttpNotFound();
+            }
+            ViewBag.ArticleTypeID = new SelectList(db.ArticleTypes, "ArticleTypeID", "ArticleType1", article.ArticleTypeID);
+            ViewBag.ColorID = new SelectList(db.Colors, "ColorID", "Color1", article.ColorID);
+            ViewBag.OccasionID = new SelectList(db.Occasions, "OccasionID", "Occasion1", article.OccasionID);
+            ViewBag.SeasonID = new SelectList(db.Seasons, "SeasonID", "Season1", article.SeasonID);
+            return View(article);
+        }
+
+        // POST: Articles/Accessories/Edit/5
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult EditAccessories([Bind(Include = "ArticleID,Name,Photo,ArticleTypeID,ColorID,SeasonID,OccasionID")] Article article)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(article).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Accessories");
+            }
+            ViewBag.ArticleTypeID = new SelectList(db.ArticleTypes, "ArticleTypeID", "ArticleType1", article.ArticleTypeID);
+            ViewBag.ColorID = new SelectList(db.Colors, "ColorID", "Color1", article.ColorID);
+            ViewBag.OccasionID = new SelectList(db.Occasions, "OccasionID", "Occasion1", article.OccasionID);
+            ViewBag.SeasonID = new SelectList(db.Seasons, "SeasonID", "Season1", article.SeasonID);
+            return View(article);
+        }
+
         // GET: Articles/Delete/5
         public ActionResult Delete(int? id)
         {
@@ -192,6 +472,7 @@ namespace WardrobeMVCProject.Controllers
             return View(article);
         }
 
+        
         // POST: Articles/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
@@ -203,6 +484,110 @@ namespace WardrobeMVCProject.Controllers
             return RedirectToAction("Index");
         }
 
+        // GET: Articles/Suits/Delete/5
+        public ActionResult DeleteSuits(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Article article = db.Articles.Find(id);
+            if (article == null)
+            {
+                return HttpNotFound();
+            }
+            return View(article);
+        }
+
+        // POST: Articles/Suits/Delete/5
+        [HttpPost, ActionName("DeleteSuits")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteSuitsConfirmed(int id)
+        {
+            Article article = db.Articles.Find(id);
+            db.Articles.Remove(article);
+            db.SaveChanges();
+            return RedirectToAction("Suits");
+        }
+
+        // GET: Articles/Shoes/Delete/5
+        public ActionResult DeleteShoes(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Article article = db.Articles.Find(id);
+            if (article == null)
+            {
+                return HttpNotFound();
+            }
+            return View(article);
+        }
+
+        // POST: Articles/Shoes/Delete/5
+        [HttpPost, ActionName("DeleteShoes")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteShoesConfirmed(int id)
+        {
+            Article article = db.Articles.Find(id);
+            db.Articles.Remove(article);
+            db.SaveChanges();
+            return RedirectToAction("Shoes");
+        }
+
+        // GET: Articles/Capes/Delete/5
+        public ActionResult DeleteCapes(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Article article = db.Articles.Find(id);
+            if (article == null)
+            {
+                return HttpNotFound();
+            }
+            return View(article);
+        }
+
+        // POST: Articles/Capes/Delete/5
+        [HttpPost, ActionName("DeleteCapes")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteCapesConfirmed(int id)
+        {
+            Article article = db.Articles.Find(id);
+            db.Articles.Remove(article);
+            db.SaveChanges();
+            return RedirectToAction("Capes");
+        }
+
+        // GET: Articles/Accessories/Delete/5
+        public ActionResult DeleteAccessories(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Article article = db.Articles.Find(id);
+            if (article == null)
+            {
+                return HttpNotFound();
+            }
+            return View(article);
+        }
+
+        // POST: Articles/Accessories/Delete/5
+        [HttpPost, ActionName("DeleteAccessories")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteAccessoriesConfirmed(int id)
+        {
+            Article article = db.Articles.Find(id);
+            db.Articles.Remove(article);
+            db.SaveChanges();
+            return RedirectToAction("Accessories");
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
@@ -211,5 +596,9 @@ namespace WardrobeMVCProject.Controllers
             }
             base.Dispose(disposing);
         }
+
+
+
+
     }
 }

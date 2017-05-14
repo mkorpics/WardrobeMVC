@@ -4,13 +4,15 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
+<div class="page-header textBox container">
+    <h2>Create</h2>
+</div>
 
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Article</h4>
         <hr />
@@ -72,7 +74,11 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Articles", "Index", new { }, new { @class = "btn superheroBtn", role = "button" })
+    @Html.ActionLink("Suits", "Suits", new { }, new { @class = "btn superheroBtn", role = "button" })
+    @Html.ActionLink("Capes", "Capes", new { }, new { @class = "btn superheroBtn", role = "button" })
+    @Html.ActionLink("Shoes", "Shoes", new { }, new { @class = "btn superheroBtn", role = "button" })
+    @Html.ActionLink("Accessories", "Accessories", new { }, new { @class = "btn superheroBtn", role = "button" })
 </div>
 
 @section Scripts {

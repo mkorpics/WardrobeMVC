@@ -4,5 +4,44 @@
     ViewBag.Title = "Suits";
 }
 
-<h2>Suits</h2>
+<div class="container-fluid">
 
+    <div class="page-header textBox container">
+        <h2>Suits</h2>
+
+        <p>
+            @Html.ActionLink("Create New", "CreateSuits", new { }, new { @class = "btn superheroBtn", role = "button" })
+        </p>
+    </div>
+
+    <div class="row articleDisplay">
+        @foreach (var item in Model)
+            {
+            <div class="col-md-5 col-sm-12 articleContent border">
+                <div class="col-md-3 col col-sm-4 col-xs-4">
+                    <div class="thumbnail">
+                        <img src="@Url.Content(item.Photo)" onerror="if (this.src != 'error.jpg') this.src = '~/Content/images/No-Photo-Available-240x300.jpg';" />
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-sm-3 col-xs-3">
+                    <p>@Html.DisplayNameFor(model => model.Name): </p>
+                    <p>@Html.DisplayNameFor(model => model.Color.Color1):</p>
+                    <p>@Html.DisplayNameFor(model => model.Occasion.Occasion1): </p>
+                    <p>@Html.DisplayNameFor(model => model.Season.Season1): </p>
+                </div>
+
+                <div class="col-md-7 col-sm-5 col-xs-5">
+                    <p>@Html.DisplayFor(modelItem => item.Name)</p>
+                    <p>@Html.DisplayFor(modelItem => item.Color.Color1)</p>
+                    <p>@Html.DisplayFor(modelItem => item.Occasion.Occasion1)</p>
+                    <p>@Html.DisplayFor(modelItem => item.Season.Season1)</p>
+                    @Html.ActionLink("Edit", "EditSuits", new { id = item.ArticleID }, new { @class = "btn superheroBtn", role = "button" })
+                    @Html.ActionLink("Details", "Details", new { id = item.ArticleID }, new { @class = "btn superheroBtn", role = "button" })
+                    @Html.ActionLink("Delete", "DeleteSuits", new { id = item.ArticleID }, new { @class = "btn superheroBtn", role = "button" })
+                </div>
+            </div>
+
+        }
+    </div>
+</div>

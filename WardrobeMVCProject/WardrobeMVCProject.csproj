@@ -181,6 +181,17 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\IMG_2974.JPG" />
+    <Content Include="Content\images\IMG_2975.JPG" />
+    <Content Include="Content\images\IMG_2976.JPG" />
+    <Content Include="Content\images\IMG_2977.JPG" />
+    <Content Include="Content\images\IMG_2978.JPG" />
+    <Content Include="Content\images\IMG_2979.JPG" />
+    <Content Include="Content\images\IMG_2980.JPG" />
+    <Content Include="Content\images\IMG_2981.JPG" />
+    <Content Include="Content\images\No-Photo-Available-240x300.jpg" />
+    <Content Include="Content\images\skyline.jpg" />
+    <Content Include="Content\images\wood-2065369_960_720.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -264,10 +275,21 @@
     <Content Include="Views\Articles\Capes.cshtml" />
     <Content Include="Views\Articles\Shoes.cshtml" />
     <Content Include="Views\Articles\Accessories.cshtml" />
+    <Content Include="Views\Articles\CreateSuits.cshtml" />
+    <Content Include="Views\Articles\DeleteSuits.cshtml" />
+    <Content Include="Views\Articles\CreateShoes.cshtml" />
+    <Content Include="Views\Articles\CreateCapes.cshtml" />
+    <Content Include="Views\Articles\CreateAccessories.cshtml" />
+    <Content Include="Views\Articles\DeleteShoes.cshtml" />
+    <Content Include="Views\Articles\DeleteCapes.cshtml" />
+    <Content Include="Views\Articles\DeleteAccessories.cshtml" />
+    <Content Include="Views\Articles\EditSuits.cshtml" />
+    <Content Include="Views\Articles\EditShoes.cshtml" />
+    <Content Include="Views\Articles\EditCapes.cshtml" />
+    <Content Include="Views\Articles\EditAccessories.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
