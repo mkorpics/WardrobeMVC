@@ -4,7 +4,7 @@
     ViewBag.Title = "Suits";
 }
 
-<div class="container-fluid">
+<div class="container-fluid body-content">
 
     <div class="page-header textBox container">
         <h2>Suits</h2>
@@ -37,7 +37,7 @@
                     <p>@Html.DisplayFor(modelItem => item.Occasion.Occasion1)</p>
                     <p>@Html.DisplayFor(modelItem => item.Season.Season1)</p>
                     @Html.ActionLink("Edit", "EditSuits", new { id = item.ArticleID }, new { @class = "btn superheroBtn", role = "button" })
-                    @Html.ActionLink("Details", "Details", new { id = item.ArticleID }, new { @class = "btn superheroBtn", role = "button" })
+                    @Html.ActionLink("Details", "DetailsSuits", new { id = item.ArticleID }, new { @class = "btn superheroBtn", role = "button" })
                     @Html.ActionLink("Delete", "DeleteSuits", new { id = item.ArticleID }, new { @class = "btn superheroBtn", role = "button" })
                 </div>
             </div>

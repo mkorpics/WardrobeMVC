@@ -287,6 +287,10 @@
     <Content Include="Views\Articles\EditShoes.cshtml" />
     <Content Include="Views\Articles\EditCapes.cshtml" />
     <Content Include="Views\Articles\EditAccessories.cshtml" />
+    <Content Include="Views\Articles\DetailsSuits.cshtml" />
+    <Content Include="Views\Articles\DetailsShoes.cshtml" />
+    <Content Include="Views\Articles\DetailsCapes.cshtml" />
+    <Content Include="Views\Articles\DetailsAccessories.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

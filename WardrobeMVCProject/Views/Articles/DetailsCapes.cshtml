@@ -1,7 +1,7 @@
 ﻿@model WardrobeMVCProject.Models.Article
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "DetailsCapes";
 }
 
 <div class="page-header textBox container body-content">
@@ -32,9 +32,9 @@
 
 </div>
 
-<div class="textBox detailsDisplay">
+<div class="textBox detailsDisplay buttonDisplay">
     <p>
-        @Html.ActionLink("Back to List", "Index", new { id = Model.ArticleID }, new { @class = "btn superheroBtn largeBtn", role = "button" })
+        @Html.ActionLink("Back to List", "Capes", new { id = Model.ArticleID }, new { @class = "btn superheroBtn largeBtn", role = "button" })
     </p>
     <p>
         @Html.ActionLink("Edit", "Edit", new { id = Model.ArticleID }, new { @class = "btn superheroBtn largeBtn", role = "button" })
