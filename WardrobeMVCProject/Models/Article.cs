@@ -37,6 +37,7 @@ namespace WardrobeMVCProject.Models
         public string Name { get; set; }
 
         [StringLength(100, ErrorMessage = "This field cannot exceed 100 characters.")]
+        [DisplayFormat(NullDisplayText = "~/Content/images/No-Photo-Available-240x300.jpg", ApplyFormatInEditMode = true)]
         public string Photo { get; set; }
 
         [Display(Name = "Type of Article")]

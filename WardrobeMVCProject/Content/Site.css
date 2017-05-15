@@ -8,7 +8,6 @@
 .body-content {
     padding-right: 2vw;
     padding-left: 4.5vw;
-    min-height: 100vh;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -90,8 +89,27 @@ ul.nav.navbar-nav li .navbarLink {
     background-color: rgba(0,0,0,0);
 }
 
+.outfitDetails{
+    width: 18vw;
+    display: inline-block;
+    padding-top: 0;
+    margin: 2vh 1vw;
+}
+
+.outfitDetails img{
+    height: 20vh;
+}
+
+.outfitDetailsBtn {
+    margin: 5vh 33vw;
+}
+
 .articleContent img {
     border: 4px groove black;
+}
+
+.paddingLeftOutfit {
+    padding-left: 5vw;
 }
 
 .border {
@@ -125,7 +143,7 @@ ul.nav.navbar-nav li .navbarLink {
     padding-left: 20vw;
 }
 
-.detailsPhoto.thumbnail, .deletePhoto.thumbnail {
+.detailsPhoto.thumbnail, .deletePhoto.thumbnail, .outfitDetails.thumbnail {
     border: none;
 }
 

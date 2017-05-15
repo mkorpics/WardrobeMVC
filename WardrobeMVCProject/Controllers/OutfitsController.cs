@@ -18,6 +18,7 @@ namespace WardrobeMVCProject.Controllers
         public ActionResult Index()
         {
             var outfits = db.Outfits.Include(o => o.Article).Include(o => o.Article1).Include(o => o.Article2).Include(o => o.Article3).Include(o => o.Article4).Include(o => o.Article5).Include(o => o.Article6).Include(o => o.Article7).Include(o => o.Article8).Include(o => o.Article9).Include(o => o.Article10).Include(o => o.Article11);
+
             return View(outfits.ToList());
         }
 

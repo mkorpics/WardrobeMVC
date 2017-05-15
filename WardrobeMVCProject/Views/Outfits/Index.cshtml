@@ -4,96 +4,39 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<div class="page-header textBox container">
+    <h2>Outfits</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Article.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Article1.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Article2.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Article3.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Article4.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Article5.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Article6.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Article7.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Article8.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Article9.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Article10.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Article11.Name)
-        </th>
-        <th></th>
-    </tr>
+    <p>
+        @Html.ActionLink("Create A New Outfit", "Create", new { }, new { @class = "btn superheroBtn", role = "button" })
+    </p>
+</div>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Article.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Article1.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Article2.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Article3.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Article4.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Article5.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Article6.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Article7.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Article8.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Article9.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Article10.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Article11.Name)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.OutfitID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.OutfitID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.OutfitID })
-        </td>
-    </tr>
-}
+<div class="row articleDisplay">
 
-</table>
+    @foreach (var item in Model)
+    {
+        <div class="col-md-3 col-sm-12 articleContent border">
+            <h4 class="text-center">Outfit</h4>
+            <p class="bold paddingLeftOutfit">Articles:</p>
+            <div class="text-center">
+                <p>@Html.DisplayFor(modelItem => item.Article.Name)</p>
+                <p>@Html.DisplayFor(modelItem => item.Article1.Name)</p>
+                <p>@Html.DisplayFor(modelItem => item.Article2.Name)</p>
+                <p>@Html.DisplayFor(modelItem => item.Article3.Name)</p>
+                <p>@Html.DisplayFor(modelItem => item.Article4.Name)</p>
+                <p>@Html.DisplayFor(modelItem => item.Article5.Name)</p>
+                <p>@Html.DisplayFor(modelItem => item.Article6.Name)</p>
+                <p>@Html.DisplayFor(modelItem => item.Article7.Name)</p>
+                <p>@Html.DisplayFor(modelItem => item.Article8.Name)</p>
+                <p>@Html.DisplayFor(modelItem => item.Article9.Name)</p>
+                <p>@Html.DisplayFor(modelItem => item.Article10.Name)</p>
+                <p>@Html.DisplayFor(modelItem => item.Article11.Name)</p>
+                @Html.ActionLink("Edit", "Edit", new { id = item.OutfitID }, new { @class = "btn superheroBtn", role = "button" })
+                @Html.ActionLink("Details", "Details", new { id = item.OutfitID }, new { @class = "btn superheroBtn", role = "button" })
+                @Html.ActionLink("Delete", "Delete", new { id = item.OutfitID }, new { @class = "btn superheroBtn", role = "button" })
+            </div>
+        </div>
+    }
+
+</div>

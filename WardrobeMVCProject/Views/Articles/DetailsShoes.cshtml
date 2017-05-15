@@ -10,7 +10,14 @@
 
 <div class="textBox detailsDisplay">
     <div class="row thumbnail detailsPhoto">
-        <img src="@Url.Content(Model.Photo)" onerror="if (this.src != 'error.jpg') this.src = '~/Content/images/No-Photo-Available-240x300.jpg';" />
+        @if (!string.IsNullOrEmpty(Model.Photo))
+        {
+            <img src="@Url.Content(Model.Photo)" />
+        }
+        else
+        {
+            <img src="~/Content/images/No-Photo-Available-240x300.jpg" />
+        }
     </div>
 
     <h2>@Html.DisplayFor(model => model.Name)</h2>

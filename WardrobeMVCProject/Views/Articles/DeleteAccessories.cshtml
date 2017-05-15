@@ -12,7 +12,14 @@
 
 <div class="alternateTextBox">
     <div class="row thumbnail deletePhoto">
-        <img src="@Url.Content(Model.Photo)" onerror="if (this.src != 'error.jpg') this.src = '~/Content/images/No-Photo-Available-240x300.jpg';" />
+        @if (!string.IsNullOrEmpty(Model.Photo))
+        {
+            <img src="@Url.Content(Model.Photo)" />
+        }
+        else
+        {
+            <img src="~/Content/images/No-Photo-Available-240x300.jpg" />
+        }
     </div>
     <hr />
     <dl class="dl-horizontal textLeft">
