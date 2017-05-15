@@ -121,7 +121,7 @@ ul.nav.navbar-nav li .navbarLink {
     margin-left: 2vw;
 }
 
-/*JUMBOTRON*/
+/*HOMEPAGE AND JUMBOTRON*/
 .jumbotron {
     background-image: url('images/IMG_2981.JPG');
     background-size: cover;
@@ -136,6 +136,17 @@ ul.nav.navbar-nav li .navbarLink {
     .jumbotron .textBox .btn {
         margin: 5px;
     }
+
+.textBoxHome {
+    background-color: rgba(0,0,0,1);
+    color: white;
+    text-shadow: 2px 2px 2px green;
+    text-align: center;
+    font-size: 15px;
+    width: 50vw;
+    height: 68vh;
+    padding: 3vh 1vw;
+}
 
 /*ARTICLES INDEX PAGE*/
 .caption {
@@ -195,7 +206,7 @@ footer {
 @media (max-width: 1200px) {
 
     /*GENERAL*/
-    .page-header{
+    .page-header {
         width: 80vw;
     }
 
@@ -204,7 +215,7 @@ footer {
     }
 
     /*JUMBOTRON*/
-    .jumbotron .textBox{
+    .jumbotron .textBoxHome {
         width: 89vw;
         margin-left: 2vw;
     }
@@ -214,12 +225,12 @@ footer {
         height: 15vh;
     }
 
-    .thumbnail.indexPhoto{
+    .thumbnail.indexPhoto {
         border: none;
     }
 
     /*ARTICLES DETAILS AND DELETE PAGES*/
-    .detailsDisplay{
+    .detailsDisplay {
         width: 95vw;
         margin-left: 3vw;
     }
@@ -229,7 +240,7 @@ footer {
     }
 
     /*OUTFIT INDEX*/
-    .paddingLeftOutfit{
+    .paddingLeftOutfit {
         margin-left: 3vw;
     }
 

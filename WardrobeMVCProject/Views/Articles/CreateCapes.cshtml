@@ -4,10 +4,12 @@
     ViewBag.Title = "CreateCapes";
 }
 
+@*Page Header*@
 <div class="page-header textBox container body-content">
     <h2>Create Cape</h2>
 </div>
 
+@*Put create form and link buttons in customized text box*@
 <div class="alternateTextBox">
     @using (Html.BeginForm())
     {
@@ -74,7 +76,7 @@
     }
 
     <div>
-        @Html.ActionLink("Back to List", "Capes", new { }, new { @class = "btn superheroBtn", role = "button" })
+        @Html.ActionLink("Back to Capes", "Capes", new { }, new { @class = "btn superheroBtn", role = "button" })
     </div>
     </div>
 

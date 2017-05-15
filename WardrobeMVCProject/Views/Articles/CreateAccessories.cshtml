@@ -4,10 +4,12 @@
     ViewBag.Title = "CreateAccessories";
 }
 
+@*Page Header*@
 <div class="page-header textBox container body-content">
     <h2>Create Accessory</h2>
 </div>
 
+@*Put create form and link buttons in customized text box*@
 <div class="alternateTextBox">
     @using (Html.BeginForm())
     {
@@ -74,7 +76,7 @@
     }
 
     <div>
-        @Html.ActionLink("Back to List", "Accessories", new { }, new { @class = "btn superheroBtn", role = "button" })
+        @Html.ActionLink("Back to Accessories", "Accessories", new { }, new { @class = "btn superheroBtn", role = "button" })
     </div>
 </div>
 

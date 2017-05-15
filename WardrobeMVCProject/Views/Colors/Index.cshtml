@@ -5,10 +5,13 @@
 }
 
 <div class="page-header textBox container">
-    <h2>Index</h2>
+    <h2>Colors</h2>
 
     <p>
         @Html.ActionLink("Create New", "Create", new { }, new { @class = "btn superheroBtn", role = "button" })
+    </p>
+    <p>
+        @Html.ActionLink("Back to Articles", "Index", "Articles", new { }, new { @class = "btn superheroBtn", role = "button" })
     </p>
 
 </div>
@@ -30,7 +33,6 @@
                 </td>
                 <td>
                     @Html.ActionLink("Edit", "Edit", new { id = item.ColorID }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.ColorID }) |
                     @Html.ActionLink("Delete", "Delete", new { id = item.ColorID })
                 </td>
             </tr>

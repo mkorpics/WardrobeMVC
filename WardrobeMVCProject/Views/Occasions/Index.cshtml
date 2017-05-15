@@ -4,30 +4,38 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<div class="page-header textBox container">
+    <h2>Occassions</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Occasion1)
-        </th>
-        <th></th>
-    </tr>
+    <p>
+        @Html.ActionLink("Create New", "Create", new { }, new { @class = "btn superheroBtn", role = "button" })
+    </p>
+    <p>
+        @Html.ActionLink("Back to Articles", "Index", "Articles", new { }, new { @class = "btn superheroBtn", role = "button" })
+    </p>
+</div>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Occasion1)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.OccasionID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.OccasionID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.OccasionID })
-        </td>
-    </tr>
-}
+<div class="alternateTextBox">
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Occasion1)
+            </th>
+            <th></th>
+        </tr>
 
-</table>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Occasion1)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.OccasionID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.OccasionID })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

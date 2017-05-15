@@ -4,6 +4,7 @@
     ViewBag.Title = "Delete";
 }
 
+@*Page Header*@
 <div class="page-header textBox container body-content">
     <h2>Delete</h2>
 
@@ -12,6 +13,7 @@
 
 <div class="textBox detailsDisplay">
     <div class="row thumbnail detailsPhoto">
+        @*Add Photo and check if it is null. If so, display default photo*@
         @if (!string.IsNullOrEmpty(Model.Photo))
         {
             <img src="@Url.Content(Model.Photo)" />
@@ -22,8 +24,10 @@
         }
     </div>
 
+    @*Article Name*@
     <h2>@Html.DisplayFor(model => model.Name)</h2>
 
+    @*Display other fields in two columns so displays on view as fieldname: value*@
     <div class="row detailsText">
         <div class="col-md-5 col-sm-5 col-xs-5 textRight">
             <p class="bold">@Html.DisplayNameFor(model => model.ArticleType.ArticleType1):</p>
@@ -43,14 +47,11 @@
     {
         @Html.AntiForgeryToken()
 
+        @*Delete and Link Buttons*@
         <div class="form-actions no-color">
             <input type="submit" value="Delete" class="btn superheroBtn" />
             <p>
-                @Html.ActionLink("Articles", "Index", new { }, new { @class = "btn superheroBtn", role = "button" })
-                @Html.ActionLink("Suits", "Suits", new { }, new { @class = "btn superheroBtn", role = "button" })
-                @Html.ActionLink("Capes", "Capes", new { }, new { @class = "btn superheroBtn", role = "button" })
-                @Html.ActionLink("Shoes", "Shoes", new { }, new { @class = "btn superheroBtn", role = "button" })
-                @Html.ActionLink("Accessories", "Accessories", new { }, new { @class = "btn superheroBtn", role = "button" })
+                @Html.ActionLink("Manage Articles", "Index", new { }, new { @class = "btn superheroBtn", role = "button" })
             </p>
         </div>
     }

@@ -4,11 +4,13 @@
     ViewBag.Title = "DetailsShoes";
 }
 
+@*Page Header*@
 <div class="page-header textBox container body-content">
     <h2>Details</h2>
 </div>
 
 <div class="textBox detailsDisplay">
+    @*Add Photo and check if it is null. If so, display default photo*@
     <div class="row thumbnail detailsPhoto">
         @if (!string.IsNullOrEmpty(Model.Photo))
         {
@@ -20,8 +22,10 @@
         }
     </div>
 
+    @*Article Name*@
     <h2>@Html.DisplayFor(model => model.Name)</h2>
 
+    @*Display other fields in two columns so displays on view as fieldname: value*@
     <div class="row detailsText">
         <div class="col-md-5 col-sm-5 col-xs-5 textRight">
             <p class="bold">@Html.DisplayNameFor(model => model.ArticleType.ArticleType1):</p>
@@ -39,18 +43,16 @@
 
 </div>
 
+@*Link Buttons*@
 <div class="textBox detailsDisplay buttonDisplay">
     <p>
-        @Html.ActionLink("Back to List", "Shoes", new { id = Model.ArticleID }, new { @class = "btn superheroBtn largeBtn", role = "button" })
+        @Html.ActionLink("Back to Shoes", "Shoes", new { id = Model.ArticleID }, new { @class = "btn superheroBtn largeBtn", role = "button" })
     </p>
     <p>
         @Html.ActionLink("Edit", "Edit", new { id = Model.ArticleID }, new { @class = "btn superheroBtn largeBtn", role = "button" })
     </p>
     <p>
         @Html.ActionLink("Articles", "Index", new { }, new { @class = "btn superheroBtn", role = "button" })
-        @Html.ActionLink("Suits", "Suits", new { }, new { @class = "btn superheroBtn", role = "button" })
-        @Html.ActionLink("Capes", "Capes", new { }, new { @class = "btn superheroBtn", role = "button" })
-        @Html.ActionLink("Shoes", "Shoes", new { }, new { @class = "btn superheroBtn", role = "button" })
-        @Html.ActionLink("Accessories", "Accessories", new { }, new { @class = "btn superheroBtn", role = "button" })
+        @Html.ActionLink("Outfits", "Index", "Outfits", new { }, new { @class = "btn superheroBtn", role = "button" })
     </p>
 </div>

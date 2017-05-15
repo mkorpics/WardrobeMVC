@@ -6,6 +6,7 @@
 
 <div class="container-fluid body-content">
 
+    @*Page Header*@
     <div class="page-header textBox container">
         <h2>Accessories</h2>
 
@@ -14,10 +15,12 @@
         </p>
     </div>
 
+    @*foreach loop to display items of "accessory" article type*@
     <div class="row articleDisplay">
         @foreach (var item in Model)
             {
             <div class="col-md-5 col-sm-12 articleContent border">
+                @*Thumbnail of article*@
                 <div class="col-md-3 col col-sm-12 col-xs-12">
                     <div class="thumbnail indexPhoto">
                         @if (!string.IsNullOrEmpty(item.Photo))
@@ -31,9 +34,11 @@
                     </div>
                 </div>
 
+                @*Name of article*@
                 <div class="col-md-9 col-sm-12 col-xs-12">
                     <p class="bold">@Html.DisplayFor(modelItem => item.Name)</p>
 
+                    @*Display properties of article in two columns to display as - fieldname: value.*@
                     <div class="col-md-3 col-sm-3 col-xs-3">
                         <p>@Html.DisplayNameFor(model => model.Color.Color1):</p>
                         <p>@Html.DisplayNameFor(model => model.Occasion.Occasion1): </p>
@@ -45,6 +50,8 @@
                         <p>@Html.DisplayFor(modelItem => item.Occasion.Occasion1)</p>
                         <p>@Html.DisplayFor(modelItem => item.Season.Season1)</p>
                     </div>
+
+                    @*Buttons to manage the article*@
                     @Html.ActionLink("Edit", "EditAccessories", new { id = item.ArticleID }, new { @class = "btn superheroBtn", role = "button" })
                     @Html.ActionLink("Details", "DetailsAccessories", new { id = item.ArticleID }, new { @class = "btn superheroBtn", role = "button" })
                     @Html.ActionLink("Delete", "DeleteAccessories", new { id = item.ArticleID }, new { @class = "btn superheroBtn", role = "button" })

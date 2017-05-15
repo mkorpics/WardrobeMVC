@@ -4,6 +4,7 @@
     ViewBag.Title = "DeleteSuits";
 }
 
+@*Page Header*@
 <div class="page-header textBox container body-content">
     <h2>Delete Suit</h2>
 
@@ -11,6 +12,7 @@
 </div>
 
 <div class="textBox detailsDisplay">
+    @*Add Photo and check if it is null. If so, display default photo*@
     <div class="row thumbnail detailsPhoto">
         @if (!string.IsNullOrEmpty(Model.Photo))
         {
@@ -22,8 +24,10 @@
         }
     </div>
 
+    @*Article Name*@
     <h2>@Html.DisplayFor(model => model.Name)</h2>
 
+    @*Display other fields in two columns so displays on view as fieldname: value*@
     <div class="row detailsText">
         <div class="col-md-5 col-sm-5 col-xs-5 textRight">
             <p class="bold">@Html.DisplayNameFor(model => model.ArticleType.ArticleType1):</p>
@@ -44,9 +48,10 @@
     @using (Html.BeginForm()) {
         @Html.AntiForgeryToken()
 
+        @*Delete and Link Buttons*@
         <div class="form-actions no-color">
             <input type="submit" value="Delete" class="btn superheroBtn" /> |
-            @Html.ActionLink("Back to List", "Suits", new { }, new { @class = "btn superheroBtn", role = "button" })
+            @Html.ActionLink("Back to Suits", "Suits", new { }, new { @class = "btn superheroBtn", role = "button" })
         </div>
     }
 </div>

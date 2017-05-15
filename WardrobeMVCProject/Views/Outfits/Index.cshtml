@@ -4,6 +4,7 @@
     ViewBag.Title = "Index";
 }
 
+@*Page Header*@
 <div class="page-header textBox container">
     <h2>Outfits</h2>
 
@@ -14,11 +15,15 @@
 
 <div class="row articleDisplay">
 
+    @*foreach loop to display outfits (automatically filters null articles from the outfit / doesn't display them)*@
     @foreach (var item in Model)
     {
+        //Each outfit in a column
         <div class="col-md-3 col-sm-12 articleContent border">
-            <h4 class="text-center">Outfit</h4>
+            @*Outfit Title*@
+            <h4 class="text-center">Super-Outfit</h4>
 
+            @*Display suit, shoes and cape articles in a row in two columns to display on view as typename: articlename*@
             <div class="row paddingLeftOutfit">
                 <div class="col-md-2 col-sm-2 col-xs-2">
                     <p class="bold">Suit:</p>
@@ -33,18 +38,27 @@
                 </div>
             </div>
 
+            @*List the Accessories from the specified accessory lists*@
             <div class="text-center">
-                <p class="bold">Accessories</p>
-                <p>@Html.DisplayFor(modelItem => item.Article3.Name)</p>
-                <p>@Html.DisplayFor(modelItem => item.Article4.Name)</p>
-                <p>@Html.DisplayFor(modelItem => item.Article5.Name)</p>
-                <p class="bold ">Additional Articles</p>
-                <p>@Html.DisplayFor(modelItem => item.Article6.Name)</p>
-                <p>@Html.DisplayFor(modelItem => item.Article7.Name)</p>
-                <p>@Html.DisplayFor(modelItem => item.Article8.Name)</p>
-                <p>@Html.DisplayFor(modelItem => item.Article9.Name)</p>
-                <p>@Html.DisplayFor(modelItem => item.Article10.Name)</p>
-                <p>@Html.DisplayFor(modelItem => item.Article11.Name)</p>
+                <div>
+                    <p class="bold">Accessories</p>
+                    <p>@Html.DisplayFor(modelItem => item.Article3.Name)</p>
+                    <p>@Html.DisplayFor(modelItem => item.Article4.Name)</p>
+                    <p>@Html.DisplayFor(modelItem => item.Article5.Name)</p>
+                </div>
+
+                @*List any chosen additional articles*@
+                <div>
+                    <p class="bold ">Additional Articles</p>
+                    <p>@Html.DisplayFor(modelItem => item.Article6.Name)</p>
+                    <p>@Html.DisplayFor(modelItem => item.Article7.Name)</p>
+                    <p>@Html.DisplayFor(modelItem => item.Article8.Name)</p>
+                    <p>@Html.DisplayFor(modelItem => item.Article9.Name)</p>
+                    <p>@Html.DisplayFor(modelItem => item.Article10.Name)</p>
+                    <p>@Html.DisplayFor(modelItem => item.Article11.Name)</p>
+                </div>
+
+                @*Link buttons to manage outfit*@
                 <p class="outfitIndexBtn">
                     @Html.ActionLink("Edit", "Edit", new { id = item.OutfitID }, new { @class = "btn superheroBtn", role = "button" })
                     @Html.ActionLink("Details", "Details", new { id = item.OutfitID }, new { @class = "btn superheroBtn", role = "button" })

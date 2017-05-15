@@ -181,6 +181,9 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\Blank.jpg" />
+    <Content Include="Content\images\dancers-1825659_1920.jpg" />
+    <Content Include="Content\images\dancers-1825660_1920.jpg" />
     <Content Include="Content\images\IMG_2974.JPG" />
     <Content Include="Content\images\IMG_2975.JPG" />
     <Content Include="Content\images\IMG_2976.JPG" />
@@ -189,9 +192,16 @@
     <Content Include="Content\images\IMG_2979.JPG" />
     <Content Include="Content\images\IMG_2980.JPG" />
     <Content Include="Content\images\IMG_2981.JPG" />
+    <Content Include="Content\images\IMG_BlackCape.JPG" />
+    <Content Include="Content\images\IMG_BlackGreenBoots.JPG" />
+    <Content Include="Content\images\IMG_BlueCape.JPG" />
+    <Content Include="Content\images\IMG_HermesBoots.JPG" />
+    <Content Include="Content\images\IMG_OrangeGreenBoots.JPG" />
+    <Content Include="Content\images\IMG_PurpleBoots.JPG" />
+    <Content Include="Content\images\IMG_RedCape.JPG" />
+    <Content Include="Content\images\Man.gif" />
+    <Content Include="Content\images\mannequin-1312106_1920.jpg" />
     <Content Include="Content\images\No-Photo-Available-240x300.jpg" />
-    <Content Include="Content\images\skyline.jpg" />
-    <Content Include="Content\images\wood-2065369_960_720.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

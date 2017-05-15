@@ -22,6 +22,7 @@ namespace WardrobeMVCProject.Models
     
         public int OccasionID { get; set; }
         [Display(Name = "Occasion")]
+        [StringLength(50, ErrorMessage = "This field cannot exceed 50 characters.")]
         public string Occasion1 { get; set; }
     
         public virtual ICollection<Article> Articles { get; set; }

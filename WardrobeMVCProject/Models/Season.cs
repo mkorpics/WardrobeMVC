@@ -22,6 +22,7 @@ namespace WardrobeMVCProject.Models
     
         public int SeasonID { get; set; }
         [Display(Name = "Season")]
+        [StringLength(20, ErrorMessage = "This field cannot exceed 20 characters.")]
         public string Season1 { get; set; }
     
         public virtual ICollection<Article> Articles { get; set; }

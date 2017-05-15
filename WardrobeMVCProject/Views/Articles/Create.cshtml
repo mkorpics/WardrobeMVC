@@ -4,10 +4,12 @@
     ViewBag.Title = "Create";
 }
 
+@*Page Header*@
 <div class="page-header textBox container body-content">
     <h2>Create</h2>
 </div>
 
+@*Put create form and link buttons in customized text box*@
 <div class="alternateTextBox">
     @using (Html.BeginForm())
     {
@@ -75,10 +77,6 @@
 
     <div>
         @Html.ActionLink("Articles", "Index", new { }, new { @class = "btn superheroBtn", role = "button" })
-        @Html.ActionLink("Suits", "Suits", new { }, new { @class = "btn superheroBtn", role = "button" })
-        @Html.ActionLink("Capes", "Capes", new { }, new { @class = "btn superheroBtn", role = "button" })
-        @Html.ActionLink("Shoes", "Shoes", new { }, new { @class = "btn superheroBtn", role = "button" })
-        @Html.ActionLink("Accessories", "Accessories", new { }, new { @class = "btn superheroBtn", role = "button" })
     </div>
     </div>
 

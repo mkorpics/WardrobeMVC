@@ -23,6 +23,7 @@ namespace WardrobeMVCProject.Models
         public int ColorID { get; set; }
 
         [Display(Name = "Color")]
+        [StringLength(50, ErrorMessage = "This field cannot exceed 50 characters.")]
         public string Color1 { get; set; }
     
         public virtual ICollection<Article> Articles { get; set; }
