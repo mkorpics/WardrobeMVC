@@ -1,8 +1,10 @@
-﻿body {
+﻿
+/*BODY*/
+body {
     padding-top: 50px;
     padding-bottom: 20px;
     background-image: url('images/IMG_2980.JPG');
-    background-size:cover;
+    background-size: cover;
 }
 
 .body-content {
@@ -17,10 +19,6 @@
     white-space: normal;
 }
 
-.table tr th, td {
-    border: none;
-}
-
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
@@ -28,24 +26,38 @@ textarea {
     max-width: 280px;
 }
 
-.navbar {
-    background-color: black;
+/*GENERAL APPLICATION*/
+.border {
+    border: 3px groove black;
 }
 
-ul.nav.navbar-nav li .navbarLink {
-    color: white;
-    margin-left: 2vw;
+.bold {
+    font-weight: 900;
 }
 
-.jumbotron {
-    background-image: url('images/IMG_2981.JPG');
-    background-size: cover;
-    background-repeat: no-repeat;
+.textRight {
+    text-align: right;
+}
+
+.textLeft {
+    text-align: left;
+}
+
+.addMargin {
+    margin: 4vh auto;
+}
+
+.superheroBtn {
     background-color: black;
-    height: 80vh;
-    padding: 5vh 3vw;
-    margin: 0;
-    border: 2px groove black;
+    color: yellow;
+}
+
+.largeBtn {
+    padding: 7px 35px;
+}
+
+.thumbnail {
+    background-color: rgba(0,0,0,0);
 }
 
 .textBox {
@@ -58,9 +70,10 @@ ul.nav.navbar-nav li .navbarLink {
     padding: 5vh 0;
 }
 
-.jumbotron .textBox .btn {
-    margin: 5px;
-}
+    .textBox.buttonDisplay {
+        margin-top: 0;
+        padding-top: 0;
+    }
 
 .alternateTextBox {
     margin: 10vh 10vw;
@@ -85,54 +98,53 @@ ul.nav.navbar-nav li .navbarLink {
     padding: 3vh 0;
 }
 
-.thumbnail {
-    background-color: rgba(0,0,0,0);
+    .articleContent img {
+        border: 4px groove black;
+    }
+
+.detailsPhoto.thumbnail, .deletePhoto.thumbnail, .outfitDetails.thumbnail {
+    border: none;
 }
 
-.outfitDetails{
-    width: 18vw;
-    display: inline-block;
-    padding-top: 0;
-    margin: 2vh 1vw;
+.table tr th, td {
+    border: none;
 }
 
-.outfitDetails img{
-    height: 20vh;
-}
 
-.outfitDetailsBtn {
-    margin: 5vh 33vw;
-}
-
-.articleContent img {
-    border: 4px groove black;
-}
-
-.paddingLeftOutfit {
-    padding-left: 5vw;
-}
-
-.border {
-    border: 3px groove black;
-}
-
-.bold {
-    font-weight: 900;
-}
-
-.textRight {
-    text-align: right;
-}
-
-.textLeft {
-    text-align: left;
-}
-
-.superheroBtn {
+/*NAVBAR*/
+.navbar {
     background-color: black;
-    color: yellow;
 }
 
+ul.nav.navbar-nav li .navbarLink {
+    color: white;
+    margin-left: 2vw;
+}
+
+/*JUMBOTRON*/
+.jumbotron {
+    background-image: url('images/IMG_2981.JPG');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;
+    height: 80vh;
+    padding: 5vh 3vw;
+    margin: 0;
+    border: 2px groove black;
+}
+
+    .jumbotron .textBox .btn {
+        margin: 5px;
+    }
+
+/*ARTICLES INDEX PAGE*/
+.caption {
+    text-align: center;
+    padding: 2vh 2vw;
+    margin: 3vh, 6vw;
+}
+
+/*DETAILS AND DELETE PAGES*/
 .detailsDisplay {
     margin-left: 24vw;
 }
@@ -143,45 +155,92 @@ ul.nav.navbar-nav li .navbarLink {
     padding-left: 20vw;
 }
 
-.detailsPhoto.thumbnail, .deletePhoto.thumbnail, .outfitDetails.thumbnail {
-    border: none;
-}
-
 .detailsText {
     padding: 3vh 1vw;
 }
 
-.textBox.buttonDisplay {
-    margin-top: 0;
+/*OUTFIT INDEX*/
+.outfitIndexBtn {
+    margin-top: 4vh;
+}
+
+.paddingLeftOutfit {
+    padding-left: 2vw;
+}
+
+/*OUTFIT DETAILS*/
+.outfitDetails {
+    width: 18vw;
+    display: inline-block;
     padding-top: 0;
+    margin: 2vh 1vw;
 }
 
-.largeBtn {
-    padding: 7px 35px;
+    .outfitDetails img {
+        height: 20vh;
+    }
+
+.outfitDetailsBtn {
+    margin: 5vh 33vw;
 }
 
-.deletePhoto img {
-    height: 25vh;
-    margin: 0;
-    padding-left: 34vw;
-}
-
-.detailsPhoto.thumbnail {
-    border: none;
-}
-
-.caption {
-    text-align: center;
-    padding: 2vh 2vw;
-    margin: 3vh, 6vw;
-}
-
-.addMargin {
-    margin: 4vh auto;
-}
-
+/*FOOTER*/
 footer {
     text-align: center;
     height: 5vh;
     color: white;
+}
+
+
+@media (max-width: 1200px) {
+
+    /*GENERAL*/
+    .page-header{
+        width: 80vw;
+    }
+
+    .articleContent {
+        margin-left: 0;
+    }
+
+    /*JUMBOTRON*/
+    .jumbotron .textBox{
+        width: 89vw;
+        margin-left: 2vw;
+    }
+
+    /*ARTICLES TYPES PAGES*/
+    .indexPhoto img {
+        height: 15vh;
+    }
+
+    .thumbnail.indexPhoto{
+        border: none;
+    }
+
+    /*ARTICLES DETAILS AND DELETE PAGES*/
+    .detailsDisplay{
+        width: 95vw;
+        margin-left: 3vw;
+    }
+
+    .detailsPhoto {
+        margin-left: 7vw;
+    }
+
+    /*OUTFIT INDEX*/
+    .paddingLeftOutfit{
+        margin-left: 3vw;
+    }
+
+    /*OUTFIT DETAILS*/
+    .outfitDetails {
+        width: 60vw;
+        display: block;
+        margin-left: 15vw;
+    }
+
+        .outfitDetails img {
+            height: 20vh;
+        }
 }

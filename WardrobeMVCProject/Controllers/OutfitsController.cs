@@ -40,14 +40,67 @@ namespace WardrobeMVCProject.Controllers
         // GET: Outfits/Create
         public ActionResult Create()
         {
-            ViewBag.ArticleID1 = new SelectList(db.Articles, "ArticleID", "Name");
-            ViewBag.ArticleID2 = new SelectList(db.Articles, "ArticleID", "Name");
+            //Create a SelectList for SUITS only
+            List<Article> suitsList = new List<Article>();
+
+            foreach (Article a in db.Articles)
+            {
+                if(a.ArticleType.ArticleType1.ToLower().Contains("suit"))
+                {
+                    suitsList.Add(a);
+                }
+            }
+
+            IEnumerable<Article> Suits = suitsList;
+
+            //Create a SelectList for SHOES only
+            List<Article> shoesList = new List<Article>();
+
+            foreach (Article a in db.Articles)
+            {
+                if (a.ArticleType.ArticleType1.ToLower().Contains("shoes"))
+                {
+                    shoesList.Add(a);
+                }
+            }
+
+            IEnumerable<Article> Shoes = shoesList;
+
+            //Create a SelectList for CAPES only
+            List<Article> capesList = new List<Article>();
+
+            foreach(Article a in db.Articles)
+            {
+                if(a.ArticleType.ArticleType1.ToLower().Contains("cape"))
+                {
+                    capesList.Add(a);
+                }
+            }
+
+            IEnumerable<Article> Capes = capesList;
+
+            //Create a SelectList for ACCESSORIES only
+            List<Article> accessoriesList = new List<Article>();
+
+            foreach(Article a in db.Articles)
+            {
+                if(a.ArticleType.ArticleType1.ToLower().Contains("accessories"))
+                {
+                    accessoriesList.Add(a);
+                }
+            }
+
+            IEnumerable<Article> Accessories = accessoriesList;
+
+            //Add created IEnumerable Lists to the proper SelectLists
+            ViewBag.ArticleID1 = new SelectList(Suits, "ArticleID", "Name");
+            ViewBag.ArticleID2 = new SelectList(Shoes, "ArticleID", "Name");
             ViewBag.ArticleID11 = new SelectList(db.Articles, "ArticleID", "Name");
             ViewBag.ArticleID12 = new SelectList(db.Articles, "ArticleID", "Name");
-            ViewBag.ArticleID3 = new SelectList(db.Articles, "ArticleID", "Name");
-            ViewBag.ArticleID4 = new SelectList(db.Articles, "ArticleID", "Name");
-            ViewBag.ArticleID5 = new SelectList(db.Articles, "ArticleID", "Name");
-            ViewBag.ArticleID6 = new SelectList(db.Articles, "ArticleID", "Name");
+            ViewBag.ArticleID3 = new SelectList(Capes, "ArticleID", "Name");
+            ViewBag.ArticleID4 = new SelectList(Accessories, "ArticleID", "Name");
+            ViewBag.ArticleID5 = new SelectList(Accessories, "ArticleID", "Name");
+            ViewBag.ArticleID6 = new SelectList(Accessories, "ArticleID", "Name");
             ViewBag.ArticleID7 = new SelectList(db.Articles, "ArticleID", "Name");
             ViewBag.ArticleID8 = new SelectList(db.Articles, "ArticleID", "Name");
             ViewBag.ArticleID9 = new SelectList(db.Articles, "ArticleID", "Name");
@@ -96,14 +149,67 @@ namespace WardrobeMVCProject.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.ArticleID1 = new SelectList(db.Articles, "ArticleID", "Name", outfit.ArticleID1);
-            ViewBag.ArticleID2 = new SelectList(db.Articles, "ArticleID", "Name", outfit.ArticleID2);
+
+            //Create a SelectList for SUITS only
+            List<Article> suitsList = new List<Article>();
+
+            foreach (Article a in db.Articles)
+            {
+                if (a.ArticleType.ArticleType1.ToLower().Contains("suit"))
+                {
+                    suitsList.Add(a);
+                }
+            }
+
+            IEnumerable<Article> Suits = suitsList;
+
+            //Create a SelectList for SHOES only
+            List<Article> shoesList = new List<Article>();
+
+            foreach (Article a in db.Articles)
+            {
+                if (a.ArticleType.ArticleType1.ToLower().Contains("shoes"))
+                {
+                    shoesList.Add(a);
+                }
+            }
+
+            IEnumerable<Article> Shoes = shoesList;
+
+            //Create a SelectList for CAPES only
+            List<Article> capesList = new List<Article>();
+
+            foreach (Article a in db.Articles)
+            {
+                if (a.ArticleType.ArticleType1.ToLower().Contains("cape"))
+                {
+                    capesList.Add(a);
+                }
+            }
+
+            IEnumerable<Article> Capes = capesList;
+
+            //Create a SelectList for ACCESSORIES only
+            List<Article> accessoriesList = new List<Article>();
+
+            foreach (Article a in db.Articles)
+            {
+                if (a.ArticleType.ArticleType1.ToLower().Contains("accessories"))
+                {
+                    accessoriesList.Add(a);
+                }
+            }
+
+            IEnumerable<Article> Accessories = accessoriesList;
+
+            ViewBag.ArticleID1 = new SelectList(Suits, "ArticleID", "Name", outfit.ArticleID1);
+            ViewBag.ArticleID2 = new SelectList(Shoes, "ArticleID", "Name", outfit.ArticleID2);
             ViewBag.ArticleID11 = new SelectList(db.Articles, "ArticleID", "Name", outfit.ArticleID11);
             ViewBag.ArticleID12 = new SelectList(db.Articles, "ArticleID", "Name", outfit.ArticleID12);
-            ViewBag.ArticleID3 = new SelectList(db.Articles, "ArticleID", "Name", outfit.ArticleID3);
-            ViewBag.ArticleID4 = new SelectList(db.Articles, "ArticleID", "Name", outfit.ArticleID4);
-            ViewBag.ArticleID5 = new SelectList(db.Articles, "ArticleID", "Name", outfit.ArticleID5);
-            ViewBag.ArticleID6 = new SelectList(db.Articles, "ArticleID", "Name", outfit.ArticleID6);
+            ViewBag.ArticleID3 = new SelectList(Capes, "ArticleID", "Name", outfit.ArticleID3);
+            ViewBag.ArticleID4 = new SelectList(Accessories, "ArticleID", "Name", outfit.ArticleID4);
+            ViewBag.ArticleID5 = new SelectList(Accessories, "ArticleID", "Name", outfit.ArticleID5);
+            ViewBag.ArticleID6 = new SelectList(Accessories, "ArticleID", "Name", outfit.ArticleID6);
             ViewBag.ArticleID7 = new SelectList(db.Articles, "ArticleID", "Name", outfit.ArticleID7);
             ViewBag.ArticleID8 = new SelectList(db.Articles, "ArticleID", "Name", outfit.ArticleID8);
             ViewBag.ArticleID9 = new SelectList(db.Articles, "ArticleID", "Name", outfit.ArticleID9);

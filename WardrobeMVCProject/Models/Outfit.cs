@@ -17,19 +17,17 @@ namespace WardrobeMVCProject.Models
     {
         public int OutfitID { get; set; }
 
-        [Display(Name = "Top")]
         public int ArticleID1 { get; set; }
-        [Display(Name = "Top 2")]
+        [DisplayFormat(ConvertEmptyStringToNull = true, NullDisplayText = "[Null]")]
         public Nullable<int> ArticleID2 { get; set; }
-        [Display(Name = "Bottom")]
+        [DisplayFormat(ConvertEmptyStringToNull = true, NullDisplayText = "[Null]")]
         public Nullable<int> ArticleID3 { get; set; }
-        [Display(Name = "Shoes")]
+        [DisplayFormat(ConvertEmptyStringToNull = true, NullDisplayText = "[Null]")]
         public Nullable<int> ArticleID4 { get; set; }
-        [Display(Name = "Accessory")]
+        [DisplayFormat(ConvertEmptyStringToNull = true, NullDisplayText = "[Null]")]
         public Nullable<int> ArticleID5 { get; set; }
-        [Display(Name = "Accessory 2")]
+        [DisplayFormat(ConvertEmptyStringToNull = true, NullDisplayText = "[Null]")]
         public Nullable<int> ArticleID6 { get; set; }
-        [Display(Name = "Accessory 3")]
         public Nullable<int> ArticleID7 { get; set; }
         public Nullable<int> ArticleID8 { get; set; }
         public Nullable<int> ArticleID9 { get; set; }
@@ -38,10 +36,15 @@ namespace WardrobeMVCProject.Models
         public Nullable<int> ArticleID12 { get; set; }
     
         public virtual Article Article { get; set; }
+        [DisplayFormat(ConvertEmptyStringToNull = true, NullDisplayText = "[Null]")]
         public virtual Article Article1 { get; set; }
+        [DisplayFormat(ConvertEmptyStringToNull = true, NullDisplayText = "[Null]")]
         public virtual Article Article2 { get; set; }
+        [DisplayFormat(ConvertEmptyStringToNull = true, NullDisplayText = "[Null]")]
         public virtual Article Article3 { get; set; }
+        [DisplayFormat(ConvertEmptyStringToNull = true, NullDisplayText = "[Null]")]
         public virtual Article Article4 { get; set; }
+        [DisplayFormat(ConvertEmptyStringToNull = true, NullDisplayText = "[Null]")]
         public virtual Article Article5 { get; set; }
         public virtual Article Article6 { get; set; }
         public virtual Article Article7 { get; set; }

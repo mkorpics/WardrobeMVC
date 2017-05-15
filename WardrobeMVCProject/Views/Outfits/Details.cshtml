@@ -5,174 +5,199 @@
 }
 
 <div class="container">
-    
+
     <div class="page-header textBox container">
         <h2>Outfit</h2>
     </div>
 
     <hr />
 
-    <div class="outfitDetails textBox border">
-        <p class="addMargin">@Html.DisplayFor(model => model.Article.Name)</p>
-        @if (!string.IsNullOrEmpty(Model.Article.Photo))
-        {
-            <img src="@Url.Content(Model.Article.Photo)" />
-        }
-        else
-        {
-            <img src="~/Content/images/No-Photo-Available-240x300.jpg" />
-        }
-    </div>
-
-    <div class="outfitDetails textBox border">
-        <p class="addMargin">@Html.DisplayFor(model => model.Article1.Name)</p>
-        @if (!string.IsNullOrEmpty(Model.Article1.Photo))
-        {
-            <img src="@Url.Content(Model.Article1.Photo)" />
-        }
-        else
-        {
-            <img src="~/Content/images/No-Photo-Available-240x300.jpg" />
-        }
-    </div>
+        <div class="outfitDetails textBox border">
+            <p class="addMargin">@Html.DisplayFor(model => model.Article.Name)</p>
+            @if (!string.IsNullOrEmpty(Model.Article.Photo))
+            {
+                <img src="@Url.Content(Model.Article.Photo)" />
+            }
+            else
+            {
+                <img src="~/Content/images/No-Photo-Available-240x300.jpg" />
+            }
+        </div>
 
 
-    <div class="outfitDetails textBox border">
-        <p class="addMargin">@Html.DisplayFor(model => model.Article2.Name)</p>
-
-        @if (!string.IsNullOrEmpty(Model.Article2.Photo))
+        @if (Model.Article1 != null)
         {
-            <img src="@Url.Content(Model.Article2.Photo)" />
-        }
-        else
-        {
-            <img src="~/Content/images/No-Photo-Available-240x300.jpg" />
-        }
-     
-    </div>
-
- <div class="outfitDetails textBox border">
-        <p class="addMargin">@Html.DisplayFor(model => model.Article3.Name)</p>
-       
-     @if (!string.IsNullOrEmpty(Model.Article3.Photo))
-     {
-         <img src="@Url.Content(Model.Article3.Photo)" />
-     }
-     else
-     {
-         <img src="~/Content/images/No-Photo-Available-240x300.jpg" />
-     }
-
-    </div>
-
-    <div class="outfitDetails textBox border">
-        <p class="addMargin">@Html.DisplayFor(model => model.Article4.Name)</p>
-        @if (!string.IsNullOrEmpty(Model.Article4.Photo))
-        {
-            <img src="@Url.Content(Model.Article4.Photo)" />
-        }
-        else
-        {
-            <img src="~/Content/images/No-Photo-Available-240x300.jpg" />
-        }
-       
-    </div>
-
-    <div class="outfitDetails textBox border">
-        <p class="addMargin">@Html.DisplayFor(model => model.Article5.Name)</p>
-        @if (!string.IsNullOrEmpty(Model.Article5.Photo))
-        {
-            <img src="@Url.Content(Model.Article5.Photo)" />
-        }
-        else
-        {
-            <img src="~/Content/images/No-Photo-Available-240x300.jpg" />
+            <div class="outfitDetails textBox border">
+                <p class="addMargin">@Html.DisplayFor(model => model.Article1.Name)</p>
+                @if (!string.IsNullOrEmpty(Model.Article1.Photo))
+                {
+                    <img src="@Url.Content(Model.Article1.Photo)" />
+                }
+                else
+                {
+                    <img src="~/Content/images/No-Photo-Available-240x300.jpg" />
+                }
+            </div>
         }
 
-    </div>
+        @if (Model.Article2 != null)
+        {
+            <div class="outfitDetails textBox border">
+                <p class="addMargin">@Html.DisplayFor(model => model.Article2.Name)</p>
 
-    <div class="outfitDetails textBox border">
-        <p class="addMargin">@Html.DisplayFor(model => model.Article6.Name)</p>
-        @if (!string.IsNullOrEmpty(Model.Article6.Photo))
-        {
-            <img src="@Url.Content(Model.Article6.Photo)" />
-        }
-        else
-        {
-            <img src="~/Content/images/No-Photo-Available-240x300.jpg" />
-        }
-
-    </div>
-
-    <div class="outfitDetails textBox border">
-        <p class="addMargin">@Html.DisplayFor(model => model.Article7.Name)</p>
-        @if (!string.IsNullOrEmpty(Model.Article7.Photo))
-        {
-            <img src="@Url.Content(Model.Article7.Photo)" />
-        }
-        else
-        {
-            <img src="~/Content/images/No-Photo-Available-240x300.jpg" />
+                @if (!string.IsNullOrEmpty(Model.Article2.Photo))
+                {
+                    <img src="@Url.Content(Model.Article2.Photo)" />
+                }
+                else
+                {
+                    <img src="~/Content/images/No-Photo-Available-240x300.jpg" />
+                }
+            </div>
         }
 
-    </div>
-
-    <div class="outfitDetails textBox border">
-        <p class="addMargin">@Html.DisplayFor(model => model.Article8.Name)</p>
-        @if (!string.IsNullOrEmpty(Model.Article8.Photo))
+        @if (Model.Article3 != null)
         {
-            <img src="@Url.Content(Model.Article8.Photo)" />
-        }
-        else
-        {
-            <img src="~/Content/images/No-Photo-Available-240x300.jpg" />
-        }
+            <div class="outfitDetails textBox border">
+                <p class="addMargin">@Html.DisplayFor(model => model.Article3.Name)</p>
 
-    </div>
+                @if (!string.IsNullOrEmpty(Model.Article3.Photo))
+                {
+                    <img src="@Url.Content(Model.Article3.Photo)" />
+                }
+                else
+                {
+                    <img src="~/Content/images/No-Photo-Available-240x300.jpg" />
+                }
 
-    <div class="outfitDetails textBox border">
-        <p class="addMargin">@Html.DisplayFor(model => model.Article9.Name)</p>
-
-        @if (!string.IsNullOrEmpty(Model.Article9.Photo))
-        {
-            <img src="@Url.Content(Model.Article9.Photo)" />
-        }
-        else
-        {
-            <img src="~/Content/images/No-Photo-Available-240x300.jpg" />
+            </div>
         }
 
-    </div>
+        @if (Model.Article4 != null)
+        {
+            <div class="outfitDetails textBox border">
+                <p class="addMargin">@Html.DisplayFor(model => model.Article4.Name)</p>
+                @if (!string.IsNullOrEmpty(Model.Article4.Photo))
+                {
+                    <img src="@Url.Content(Model.Article4.Photo)" />
+                }
+                else
+                {
+                    <img src="~/Content/images/No-Photo-Available-240x300.jpg" />
+                }
 
-    <div class="outfitDetails textBox border">
-        <p class="addMargin">@Html.DisplayFor(model => model.Article10.Name)</p>
-        @if (!string.IsNullOrEmpty(Model.Article10.Photo))
-        {
-            <img src="@Url.Content(Model.Article10.Photo)" />
-        }
-        else
-        {
-            <img src="~/Content/images/No-Photo-Available-240x300.jpg" />
-        }
-
-    </div>
-
-    <div class="outfitDetails textBox border">
-        <p class="addMargin">@Html.DisplayFor(model => model.Article11.Name)</p>
-        @if (!string.IsNullOrEmpty(Model.Article11.Photo))
-        {
-            <img src="@Url.Content(Model.Article11.Photo)" />
-        }
-        else
-        {
-            <img src="~/Content/images/No-Photo-Available-240x300.jpg" />
+            </div>
         }
 
-    </div>
-}
+        @if (Model.Article5 != null)
+        {
+            <div class="outfitDetails textBox border">
+                <p class="addMargin">@Html.DisplayFor(model => model.Article5.Name)</p>
+                @if (!string.IsNullOrEmpty(Model.Article5.Photo))
+                {
+                    <img src="@Url.Content(Model.Article5.Photo)" />
+                }
+                else
+                {
+                    <img src="~/Content/images/No-Photo-Available-240x300.jpg" />
+                }
+            </div>
+        }
+
+        @if (Model.Article6 != null)
+        {
+            <div class="outfitDetails textBox border">
+                <p class="addMargin">@Html.DisplayFor(model => model.Article6.Name)</p>
+                @if (!string.IsNullOrEmpty(Model.Article6.Photo))
+                {
+                    <img src="@Url.Content(Model.Article6.Photo)" />
+                }
+                else
+                {
+                    <img src="~/Content/images/No-Photo-Available-240x300.jpg" />
+                }
+            </div>
+        }
+
+        @if (Model.Article7 != null)
+        {
+            <div class="outfitDetails textBox border">
+                <p class="addMargin">@Html.DisplayFor(model => model.Article7.Name)</p>
+                @if (!string.IsNullOrEmpty(Model.Article7.Photo))
+                {
+                    <img src="@Url.Content(Model.Article7.Photo)" />
+                }
+                else
+                {
+                    <img src="~/Content/images/No-Photo-Available-240x300.jpg" />
+                }
+            </div>
+        }
+
+        @if (Model.Article8 != null)
+        {
+            <div class="outfitDetails textBox border">
+                <p class="addMargin">@Html.DisplayFor(model => model.Article8.Name)</p>
+                @if (!string.IsNullOrEmpty(Model.Article8.Photo))
+                {
+                    <img src="@Url.Content(Model.Article8.Photo)" />
+                }
+                else
+                {
+                    <img src="~/Content/images/No-Photo-Available-240x300.jpg" />
+                }
+            </div>
+        }
+
+        @if (Model.Article9 != null)
+        {
+            <div class="outfitDetails textBox border">
+                <p class="addMargin">@Html.DisplayFor(model => model.Article9.Name)</p>
+
+                @if (!string.IsNullOrEmpty(Model.Article9.Photo))
+                {
+                    <img src="@Url.Content(Model.Article9.Photo)" />
+                }
+                else
+                {
+                    <img src="~/Content/images/No-Photo-Available-240x300.jpg" />
+                }
+            </div>
+        }
+
+        @if (Model.Article10 != null)
+        {
+            <div class="outfitDetails textBox border">
+                <p class="addMargin">@Html.DisplayFor(model => model.Article10.Name)</p>
+                @if (!string.IsNullOrEmpty(Model.Article10.Photo))
+                {
+                    <img src="@Url.Content(Model.Article10.Photo)" />
+                }
+                else
+                {
+                    <img src="~/Content/images/No-Photo-Available-240x300.jpg" />
+                }
+            </div>
+        }
+
+        @if (Model.Article11 != null)
+        {
+            <div class="outfitDetails textBox border">
+                <p class="addMargin">@Html.DisplayFor(model => model.Article11.Name)</p>
+                @if (!string.IsNullOrEmpty(Model.Article11.Photo))
+                {
+                    <img src="@Url.Content(Model.Article11.Photo)" />
+                }
+                else
+                {
+                    <img src="~/Content/images/No-Photo-Available-240x300.jpg" />
+                }
+            </div>
+        }
+        }
+
 
 
     @Html.ActionLink("Back to List", "Index", new { }, new { @class = "btn superheroBtn largeBtn outfitDetailsBtn", role = "button" })
 
 </div>
-

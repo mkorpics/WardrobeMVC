@@ -18,23 +18,38 @@
     {
         <div class="col-md-3 col-sm-12 articleContent border">
             <h4 class="text-center">Outfit</h4>
-            <p class="bold paddingLeftOutfit">Articles:</p>
+
+            <div class="row paddingLeftOutfit">
+                <div class="col-md-2 col-sm-2 col-xs-2">
+                    <p class="bold">Suit:</p>
+                    <p class="bold">Shoes:</p>
+                    <p class="bold">Cape:</p>
+                </div>
+
+                <div class="col-md-10 col-sm-10 col-xs-10">
+                    <p>@Html.DisplayFor(modelItem => item.Article.Name)</p>
+                    <p>@Html.DisplayFor(modelItem => item.Article1.Name)</p>
+                    <p>@Html.DisplayFor(modelItem => item.Article2.Name)</p>
+                </div>
+            </div>
+
             <div class="text-center">
-                <p>@Html.DisplayFor(modelItem => item.Article.Name)</p>
-                <p>@Html.DisplayFor(modelItem => item.Article1.Name)</p>
-                <p>@Html.DisplayFor(modelItem => item.Article2.Name)</p>
+                <p class="bold">Accessories</p>
                 <p>@Html.DisplayFor(modelItem => item.Article3.Name)</p>
                 <p>@Html.DisplayFor(modelItem => item.Article4.Name)</p>
                 <p>@Html.DisplayFor(modelItem => item.Article5.Name)</p>
+                <p class="bold ">Additional Articles</p>
                 <p>@Html.DisplayFor(modelItem => item.Article6.Name)</p>
                 <p>@Html.DisplayFor(modelItem => item.Article7.Name)</p>
                 <p>@Html.DisplayFor(modelItem => item.Article8.Name)</p>
                 <p>@Html.DisplayFor(modelItem => item.Article9.Name)</p>
                 <p>@Html.DisplayFor(modelItem => item.Article10.Name)</p>
                 <p>@Html.DisplayFor(modelItem => item.Article11.Name)</p>
-                @Html.ActionLink("Edit", "Edit", new { id = item.OutfitID }, new { @class = "btn superheroBtn", role = "button" })
-                @Html.ActionLink("Details", "Details", new { id = item.OutfitID }, new { @class = "btn superheroBtn", role = "button" })
-                @Html.ActionLink("Delete", "Delete", new { id = item.OutfitID }, new { @class = "btn superheroBtn", role = "button" })
+                <p class="outfitIndexBtn">
+                    @Html.ActionLink("Edit", "Edit", new { id = item.OutfitID }, new { @class = "btn superheroBtn", role = "button" })
+                    @Html.ActionLink("Details", "Details", new { id = item.OutfitID }, new { @class = "btn superheroBtn", role = "button" })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.OutfitID }, new { @class = "btn superheroBtn", role = "button" })
+                </p>
             </div>
         </div>
     }
