@@ -134,6 +134,10 @@ ul.nav.navbar-nav li .navbarLink {
     margin-left: 2vw;
 }
 
+.glyphicon-home {
+    font-size: 17px;
+}
+
 .navbar-brand {
     font-size: 30px;
 }
