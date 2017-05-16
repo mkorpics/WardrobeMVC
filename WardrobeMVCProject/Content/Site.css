@@ -173,7 +173,7 @@ ul.nav.navbar-nav li .navbarLink {
     text-align: center;
     font-size: 15px;
     width: 50vw;
-    height: 68vh;
+    height: 70vh;
     padding: 3vh 1vw;
 }
 
@@ -255,12 +255,12 @@ footer {
 
     /*JUMBOTRON*/
     .jumbotron {
-        height: 89vh;
+        height: 93vh;
     }
 
         .jumbotron .textBoxHome {
             width: 90vw;
-            height: 78vh;
+            height: 82vh;
             margin-left: 2vw;
         }
 

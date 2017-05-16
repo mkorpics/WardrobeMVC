@@ -199,6 +199,10 @@
     <Content Include="Content\images\IMG_OrangeGreenBoots.JPG" />
     <Content Include="Content\images\IMG_PurpleBoots.JPG" />
     <Content Include="Content\images\IMG_RedCape.JPG" />
+    <Content Include="Content\images\IMG_SuitGold.JPG" />
+    <Content Include="Content\images\IMG_SuitPurple.JPG" />
+    <Content Include="Content\images\IMG_SuitScarlet.JPG" />
+    <Content Include="Content\images\IMG_SuitSilver.JPG" />
     <Content Include="Content\images\Man.gif" />
     <Content Include="Content\images\mannequin-1312106_1920.jpg" />
     <Content Include="Content\images\No-Photo-Available-240x300.jpg" />
