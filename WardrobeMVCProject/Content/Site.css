@@ -5,6 +5,7 @@ body {
     padding-bottom: 20px;
     background-image: url('images/IMG_2980.JPG');
     background-size: cover;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .body-content {
@@ -27,12 +28,24 @@ textarea {
 }
 
 /*GENERAL APPLICATION*/
+h1, h2, h3, h4, h5, p {
+    font-family: 'Open Sans', sans-serif;
+}
+
 .border {
     border: 3px groove black;
 }
 
 .bold {
     font-weight: 900;
+}
+
+.red {
+    color: #E8000D;
+}
+
+.purpleShadow {
+    text-shadow: 2px 2px 2px #50002C;
 }
 
 .textRight {
@@ -63,7 +76,7 @@ textarea {
 .textBox {
     background-color: rgba(0,0,0,.7);
     color: white;
-    text-shadow: 2px 2px 2px green;
+    text-shadow: 2px 2px 2px #008000;
     text-align: center;
     font-size: 15px;
     width: 50vw;
@@ -80,7 +93,7 @@ textarea {
     padding: 2vh 2vw;
     background-color: rgba(0,0,0,.7);
     color: white;
-    text-shadow: 2px 2px 2px green;
+    text-shadow: 2px 2px 2px #008000;
     text-align: center;
 }
 
@@ -93,7 +106,7 @@ textarea {
 .articleContent {
     background-color: rgba(0,0,0,.7);
     color: white;
-    text-shadow: 2px 2px 2px green;
+    text-shadow: 2px 2px 2px #008000;
     margin: 2vh 3vw;
     padding: 3vh 0;
 }
@@ -121,6 +134,10 @@ ul.nav.navbar-nav li .navbarLink {
     margin-left: 2vw;
 }
 
+.navbar-brand {
+    font-size: 30px;
+}
+
 /*HOMEPAGE AND JUMBOTRON*/
 .jumbotron {
     background-image: url('images/IMG_2981.JPG');
@@ -133,14 +150,22 @@ ul.nav.navbar-nav li .navbarLink {
     border: 2px groove black;
 }
 
-    .jumbotron .textBox .btn {
-        margin: 5px;
-    }
+.brandName {
+    font-family: 'Bangers', cursive;
+    color: white;
+    text-shadow: 2px 2px 2px #008000;
+}
+
+.homeBtn {
+    margin: 5px;
+    border: 2px groove #008000;
+    color: white;
+}
 
 .textBoxHome {
     background-color: rgba(0,0,0,1);
     color: white;
-    text-shadow: 2px 2px 2px green;
+    text-shadow: 2px 2px 2px #008000;
     text-align: center;
     font-size: 15px;
     width: 50vw;
@@ -179,6 +204,16 @@ ul.nav.navbar-nav li .navbarLink {
     padding-left: 2vw;
 }
 
+ /*OUTFIT CREATE*/
+.superheroBtn.red {
+    color: #E8000D;
+    display: inline-block;
+    float: left;
+    margin-top: 2vh;
+    margin-left: 4vw;
+    text-shadow: none;
+}
+
 /*OUTFIT DETAILS*/
 .outfitDetails {
     width: 18vw;
@@ -215,10 +250,15 @@ footer {
     }
 
     /*JUMBOTRON*/
-    .jumbotron .textBoxHome {
-        width: 89vw;
-        margin-left: 2vw;
+    .jumbotron {
+        height: 89vh;
     }
+
+        .jumbotron .textBoxHome {
+            width: 90vw;
+            height: 78vh;
+            margin-left: 2vw;
+        }
 
     /*ARTICLES TYPES PAGES*/
     .indexPhoto img {
@@ -236,12 +276,17 @@ footer {
     }
 
     .detailsPhoto {
-        margin-left: 7vw;
+        margin-left: 4vw;
     }
 
     /*OUTFIT INDEX*/
     .paddingLeftOutfit {
         margin-left: 3vw;
+    }
+
+    /*OUTFIT CREATE*/
+    .superheroBtn.red{
+        margin-left: 15vw;
     }
 
     /*OUTFIT DETAILS*/

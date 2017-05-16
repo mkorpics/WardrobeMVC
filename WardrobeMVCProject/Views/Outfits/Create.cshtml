@@ -42,6 +42,7 @@
                 <div class="col-md-10">
                     @Html.DropDownList("ArticleID3", null, "None", htmlAttributes: new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.ArticleID3, "", new { @class = "text-danger" })
+                   <p>@Html.ActionLink("Beware the Capes!", "CapeWarning", "Outfits", new { }, new { @class = "btn superheroBtn red", role = "button" })</p>
                 </div>
             </div>
 

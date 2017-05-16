@@ -22,6 +22,12 @@ namespace WardrobeMVCProject.Controllers
             return View(outfits.ToList());
         }
 
+        // GO TO: Cape Warning Page
+        public ActionResult CapeWarning()
+        {
+            return View();
+        }
+
         // GET: Outfits/Details/5
         public ActionResult Details(int? id)
         {
@@ -45,7 +51,7 @@ namespace WardrobeMVCProject.Controllers
 
             foreach (Article a in db.Articles)
             {
-                if(a.ArticleType.ArticleType1.ToLower().Contains("suit"))
+                if (a.ArticleType.ArticleType1.ToLower().Contains("suit"))
                 {
                     suitsList.Add(a);
                 }
@@ -69,9 +75,9 @@ namespace WardrobeMVCProject.Controllers
             //Create a SelectList for CAPES only
             List<Article> capesList = new List<Article>();
 
-            foreach(Article a in db.Articles)
+            foreach (Article a in db.Articles)
             {
-                if(a.ArticleType.ArticleType1.ToLower().Contains("cape"))
+                if (a.ArticleType.ArticleType1.ToLower().Contains("cape"))
                 {
                     capesList.Add(a);
                 }
@@ -82,9 +88,9 @@ namespace WardrobeMVCProject.Controllers
             //Create a SelectList for ACCESSORIES only
             List<Article> accessoriesList = new List<Article>();
 
-            foreach(Article a in db.Articles)
+            foreach (Article a in db.Articles)
             {
-                if(a.ArticleType.ArticleType1.ToLower().Contains("accessories"))
+                if (a.ArticleType.ArticleType1.ToLower().Contains("accessories"))
                 {
                     accessoriesList.Add(a);
                 }

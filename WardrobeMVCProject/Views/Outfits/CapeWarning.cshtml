@@ -1,0 +1,21 @@
+﻿@model WardrobeMVCProject.Models.Outfit
+
+@{
+    ViewBag.Title = "CapeWarning";
+}
+
+<div class="page-header textBox container body-content">
+    <h2 class="red purpleShadow">Warning!</h2>
+</div>
+
+<div class="alternateTextBox">
+
+    <h2>No capes!</h2>
+    <p>Do you know what happens to heroes who wear capes?</p>
+    <p><strong>Perfectly charming, particularly clever heroes</strong></p>
+    <p>hooked on missile heads, sucked into jet turbines, crushed by express elevators, caught by vortexes!</p>
+    <h3>No capes.</h3>
+
+    @Html.ActionLink("Create Another Outfit", "Create", new { }, new { @class = "btn superheroBtn addMargin", role = "button" })
+</div>
+
